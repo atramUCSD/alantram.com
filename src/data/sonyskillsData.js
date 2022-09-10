@@ -1,21 +1,10 @@
- export const skillsData = [
-    'HTML',
+ export const sonyskillsData = [
     'Photoshop',
-    'Bootstrap',
     'Figma',
-    'Javascript',
-    'CSS',
-    'React',
-    'Premiere Pro',
-    'Node JS',
-    'Git',
     'Qualtrics',
-    'Python',
-    'C++',
-    'Markdown',
-    'Java',
-    'Wordpress',
-    'Pandas',
+    'Affinity/Empathy Mapping',
+    'Competitive Analysis',
+    'Prototyping'
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

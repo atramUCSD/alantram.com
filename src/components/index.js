@@ -14,5 +14,8 @@ export { default as Services } from'./Services/Services'
 export { default as SingleProject } from './Projects/SingleProject/SingleProject'
 export { default as SingleService } from './Services/SingleService/SingleService'
 export { default as Achievement } from './Achievement/Achievement'
+export { default as WhatIs } from './Sony/WhatIs'
+export { default as Timeline } from './Sony/Timeline'
+export { default as SonySkills } from './Sony/SonySkills'
 
 export { default as BackToTop } from'./BackToTop/BackToTop'

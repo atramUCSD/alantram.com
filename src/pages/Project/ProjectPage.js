@@ -7,6 +7,7 @@ import { AiOutlineHome } from "react-icons/ai";
 
 import './ProjectPage.css'
 import { SingleProject } from '../../components';
+
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
 import { headerData } from '../../data/headerData'
@@ -91,8 +92,9 @@ function ProjectPage() {
                                 id={project.id}
                                 name={project.projectName}
                                 desc={project.projectDesc}
-                                tags={project.tags}
+                                tags={project.tags} 
                                 code={project.code}
+                                casestudy={project.casestudy}  
                                 demo={project.demo}
                                 image={project.image} 
                             />

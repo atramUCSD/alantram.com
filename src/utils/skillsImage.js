@@ -58,7 +58,6 @@ import strapi from '../assets/svg/skills/strapi.svg'
 import tensorflow from '../assets/svg/skills/tensorflow.svg'
 import webix from '../assets/svg/skills/webix.svg'
 import wordpress from '../assets/svg/skills/wordpress.svg'
-
 import azure from '../assets/svg/skills/azure.svg'
 import blender from '../assets/svg/skills/blender.svg'
 import fastify from '../assets/svg/skills/fastify.svg'
@@ -72,8 +71,16 @@ import picsart from '../assets/svg/skills/picsart.svg'
 import sketch from '../assets/svg/skills/sketch.svg'
 import unity from '../assets/svg/skills/unity.svg'
 import wolframalpha from '../assets/svg/skills/wolframalpha.svg'
-
 import canva from '../assets/svg/skills/canva.svg'
+
+import nodeJS from '../assets/svg/skills/nodeJS.svg'
+
+import qualtrics from '../assets/png/skills/Qualtrics.png'
+import pandas from '../assets/png/skills/Pandas.png'
+import competitive from '../assets/png/skills/Competitive.png'
+import mindmap from '../assets/png/skills/mindMapping.png'
+import prototyping from '../assets/png/skills/Prototyping.png'
+{/* ^^Icons I've Added^^ */}
 
 
 export const skillsImage = (skill) => {
@@ -103,6 +110,8 @@ export const skillsImage = (skill) => {
             return nextJS;
         case 'nuxt js':
             return nuxtJS;
+        case 'node js':
+            return nodeJS;
         case 'react':
             return react;
         case 'svelte':
@@ -227,6 +236,16 @@ export const skillsImage = (skill) => {
             return wolframalpha;
         case 'canva':
             return canva;
+        case 'qualtrics':
+            return qualtrics;
+        case 'pandas':
+            return pandas;
+        case 'affinity/empathy mapping':
+            return mindmap;
+        case 'competitive analysis':
+            return competitive;
+        case 'prototyping':
+            return prototyping;
         default:
             break;
     }

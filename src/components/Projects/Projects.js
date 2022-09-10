@@ -61,6 +61,7 @@ function Projects() {
                                     desc={project.projectDesc}
                                     tags={project.tags}
                                     code={project.code}
+                                    casestudy={project.casestudy}
                                     demo={project.demo}
                                     image={project.image}
                                 />

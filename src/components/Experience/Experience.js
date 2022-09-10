@@ -6,6 +6,9 @@ import './Experience.css';
 
 import { experienceData } from '../../data/experienceData'
 import ExperienceCard from './ExperienceCard';
+import ImageSlider from "./ImageSlider";
+import { SliderData } from './SliderData';
+
 
 function Experience() {
 
@@ -14,7 +17,7 @@ function Experience() {
         <div className="experience" id="experience" style={{backgroundColor: theme.secondary}}> 
              <div className="experience-body">
                  <div className="experience-image">
-                     <img src={theme.expimg} alt="" />
+                    <ImageSlider slides={SliderData}/>
                  </div>
                  <div className="experience-description">
                     <h1 style={{color:theme.primary}}>Experience</h1>

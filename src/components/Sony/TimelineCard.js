@@ -6,10 +6,19 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 import eduImgWhite from '../../assets/svg/education/eduImgWhite.svg'
 import eduImgBlack from '../../assets/svg/education/eduImgBlack.svg'
-import ucsdIcon from '../../assets/svg/education/ucsdIcon.svg'
-import './Education.css'
 
-function EducationCard({ id, institution, course, startYear, endYear }) {
+import One from '../../assets/png/sony/One.png'
+import Two from '../../assets/png/sony/Two.png'
+import Three from '../../assets/png/sony/Three.png'
+import Four from '../../assets/png/sony/Four.png'
+
+import ucsdIcon from '../../assets/svg/education/ucsdIcon.svg'
+import { sonyTimeline } from '../../data/sonyTimeline'
+import './Timeline'
+
+
+
+function TimelineCard({ id, description, title, week, img}){
 
     const { theme } = useContext(ThemeContext);
 
@@ -26,19 +35,19 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
 
     return (
         <Fade bottom>
-            <div key={id} className={`education-card ${classes.educationCard}`} >
+            <div key={sonyTimeline.id} className={`education-card ${classes.educationCard}`} >
                 <div className="educard-img" style={{backgroundColor: theme.primary}}>
                     {/* <img src={theme.type === 'light' ? eduImgBlack : eduImgWhite} alt="" /> */}
-                    <img src={ucsdIcon} alt="" />
+                    <img src={img} alt="" />
                 </div>
                 <div className="education-details">
-                    <h6 style={{color: theme.primary}}>{startYear}-{endYear}</h6>
-                    <h4 style={{color: theme.tertiary}}>{course}</h4>
-                    <h5 style={{color: theme.tertiary80}}>{institution}</h5>
+                    <h6 style={{color: theme.primary}}>{week}</h6>
+                    <h4 style={{color: theme.tertiary}}>{title}</h4>
+                    <h5 style={{color: theme.tertiary80}}>{description}</h5>
                 </div>
             </div>
         </Fade>        
     )
 }
 
-export default EducationCard
+export default TimelineCard

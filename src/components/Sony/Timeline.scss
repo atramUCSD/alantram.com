@@ -74,17 +74,35 @@
 
 .education-details > h5 {
     font-family: var(--primaryFont);
-    font-size: 1.15rem;
+    font-size: .9rem;
     font-weight: 600;
 }
 
-.education-image {
+.timeline-iframe {
     box-sizing: border-box;
     padding: 1rem;
     flex: .75;
     margin-top: 1rem;
-    pointer-events: none;
-}
+    
+    iframe{
+        display: block;
+        height: 50rem;
+        margin:auto;
+        width: 90%;
+        
+        @media only screen and (min-width: 768px) and (max-width: 1023px){
+            display:none;
+        }
+        
+        @media only screen and (min-width: 480px) and (max-width: 767px){
+            display:none;
+        }
+        
+        @media only screen and (min-width: 0px) and (max-width: 479px){
+            display:none;
+        }
+      }
+    }
 
 .education-image > img {
     width: 100%;
@@ -131,7 +149,8 @@
     .education-card {
         padding: 1rem;
         margin-bottom: 1.5rem;
-        height: 130px;
+        height: 150px;
+        width: 80vw;
     }
     .educard-img {
         border-radius: 50%;
@@ -148,12 +167,12 @@
     }
     
     .education-details > h4 {
-        font-size: 1.125rem;
+        font-size: 1rem;
         line-height: 126%;
     }
     
     .education-details > h5 {
-        font-size: 1.05rem;
+        font-size: .7rem;
         line-height: 126%;
     }
 }

@@ -1,13 +1,13 @@
 import React,{ useContext } from 'react';
 import Marquee from "react-fast-marquee";
 
-import './Skills.css'
+import '../Skills/Skills.css'
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { skillsData } from '../../data/skillsData'
+import { sonyskillsData } from '../../data/sonyskillsData'
 import { skillsImage } from '../../utils/skillsImage'
 
-function Skills() {
+function SonySkills() {
 
     const { theme } = useContext(ThemeContext);
 
@@ -19,7 +19,7 @@ function Skills() {
     return (
         <div className="skills" style={{backgroundColor: theme.secondary}}>
             <div className="skillsHeader">
-                <h2 style={{color: theme.primary}}>Skills</h2>
+                <h2 style={{color: theme.primary}}>Skills Used</h2>
             </div>
             <div className="skillsContainer">
                 <div className="skill--scroll">
@@ -32,7 +32,7 @@ function Skills() {
                         play={true} 
                         direction="left"
                     >
-                        {skillsData.map((skill, id) => (
+                        {sonyskillsData.map((skill, id) => (
                             <div className="skill--box" key={id} style={skillBoxStyle}>
                                 <img src={skillsImage(skill)} alt={skill} />
                                 <h3 style={{color: theme.tertiary}}>
@@ -47,4 +47,4 @@ function Skills() {
     )
 }
 
-export default Skills
+export default SonySkills

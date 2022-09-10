@@ -9,11 +9,8 @@ import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 
 import {
-    FaTwitter,
     FaLinkedin,
-    FaGithub,
-    FaYoutube,
-    FaBlogger,
+    FaGithub
 } from 'react-icons/fa';
 
 function Landing() {
@@ -101,45 +98,6 @@ function Landing() {
                                 />
                             </a>
                         )}
-                        {socialsData.twitter && (
-                            <a
-                                href={socialsData.twitter}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaTwitter
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Twitter'
-                                />
-                            </a>
-                        )}
-                        {socialsData.youtube && (
-                            <a
-                                href={socialsData.youtube}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaYoutube
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
-                                />
-                            </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
-                                />
-                            </a>
-                        )}
                     </div>
                 </div>
                 <img
@@ -172,7 +130,7 @@ function Landing() {
                                     rel='noreferrer'
                                 >
                                     <Button className={classes.resumeBtn}>
-                                        Download CV
+                                       Resume
                                     </Button>
                                 </a>
                             )}

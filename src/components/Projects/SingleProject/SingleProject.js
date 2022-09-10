@@ -1,12 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { FaPlay, FaCode } from 'react-icons/fa';
+import { FaPlay, FaCode, FaReadme } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 
 import placeholder from '../../../assets/png/placeholder.png';
 import './SingleProject.css';
 
-function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
+function SingleProject({ id, name, desc, tags, code, casestudy, demo, image, theme }) {
     const useStyles = makeStyles((t) => ({
         iconBtn: {
             display: 'flex',
@@ -70,6 +70,25 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                             />
                         </a>
                         <a
+                            href={casestudy}
+                            target='_blank'
+                            rel='noreferrer'
+                            className={classes.iconBtn}
+                            aria-labelledby={`${name
+                                .replace(' ', '-')
+                                .toLowerCase()} ${name
+                                .replace(' ', '-')
+                                .toLowerCase()}-demo`}
+                        >
+                            <FaReadme
+                                id={`${name
+                                    .replace(' ', '-')
+                                    .toLowerCase()}-demo`}
+                                className={classes.icon}
+                                aria-label='Readme'
+                            />
+                        </a>
+                        <a
                             href={code}
                             target='_blank'
                             rel='noreferrer'
@@ -99,6 +118,9 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                 >
                     {desc}
                 </p>
+
+                {/* 
+
                 <div
                     className='project--lang'
                     style={{
@@ -110,6 +132,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                         <span key={id}>{tag}</span>
                     ))}
                 </div>
+
+                    */}
             </div>
         </Fade>
     );

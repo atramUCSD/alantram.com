@@ -1,7 +1,7 @@
 export const contactsData = {
-    email: 'janedoe.test@gmail.com',
-    phone: '+915588776600',
-    address: 'Menlo Park, California, United States - 673822 ',
+    email: 'atramwebui@gmail.com',
+    phone: '+7605006934',
+    address: 'San Marcos, CA',
 
-    sheetAPI: ''
+    sheetAPI: 'https://sheetdb.io/api/v1/9tm62l2xv0xvv'
 }
