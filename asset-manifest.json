@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.db277111.chunk.css",
-    "main.js": "/test/static/js/main.5f4be782.chunk.js",
-    "main.js.map": "/test/static/js/main.5f4be782.chunk.js.map",
-    "runtime-main.js": "/test/static/js/runtime-main.693e5da1.js",
-    "runtime-main.js.map": "/test/static/js/runtime-main.693e5da1.js.map",
+    "main.css": "/test/static/css/main.9c41fcd8.chunk.css",
+    "main.js": "/test/static/js/main.2fadbdc1.chunk.js",
+    "main.js.map": "/test/static/js/main.2fadbdc1.chunk.js.map",
+    "runtime-main.js": "/test/static/js/runtime-main.25a5c41c.js",
+    "runtime-main.js.map": "/test/static/js/runtime-main.25a5c41c.js.map",
     "static/css/2.f2585329.chunk.css": "/test/static/css/2.f2585329.chunk.css",
-    "static/js/2.f8fab773.chunk.js": "/test/static/js/2.f8fab773.chunk.js",
-    "static/js/2.f8fab773.chunk.js.map": "/test/static/js/2.f8fab773.chunk.js.map",
-    "static/js/3.bc8fdd5d.chunk.js": "/test/static/js/3.bc8fdd5d.chunk.js",
-    "static/js/3.bc8fdd5d.chunk.js.map": "/test/static/js/3.bc8fdd5d.chunk.js.map",
+    "static/js/2.9a9aedfc.chunk.js": "/test/static/js/2.9a9aedfc.chunk.js",
+    "static/js/2.9a9aedfc.chunk.js.map": "/test/static/js/2.9a9aedfc.chunk.js.map",
+    "static/js/3.38b14888.chunk.js": "/test/static/js/3.38b14888.chunk.js",
+    "static/js/3.38b14888.chunk.js.map": "/test/static/js/3.38b14888.chunk.js.map",
     "index.html": "/test/index.html",
     "static/css/2.f2585329.chunk.css.map": "/test/static/css/2.f2585329.chunk.css.map",
-    "static/css/main.db277111.chunk.css.map": "/test/static/css/main.db277111.chunk.css.map",
-    "static/js/2.f8fab773.chunk.js.LICENSE.txt": "/test/static/js/2.f8fab773.chunk.js.LICENSE.txt",
+    "static/css/main.9c41fcd8.chunk.css.map": "/test/static/css/main.9c41fcd8.chunk.css.map",
+    "static/js/2.9a9aedfc.chunk.js.LICENSE.txt": "/test/static/js/2.9a9aedfc.chunk.js.LICENSE.txt",
     "static/media/index.css": "/test/static/media/BestermindRegular.e58a1922.ttf",
     "static/media/CAPS-Thumbnail.41b4b6c5.png": "/test/static/media/CAPS-Thumbnail.41b4b6c5.png",
     "static/media/Competitive.83d96e45.png": "/test/static/media/Competitive.83d96e45.png",
@@ -176,10 +176,10 @@
     "static/media/yellowTheme-girl.a7ec3ad5.svg": "/test/static/media/yellowTheme-girl.a7ec3ad5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.693e5da1.js",
+    "static/js/runtime-main.25a5c41c.js",
     "static/css/2.f2585329.chunk.css",
-    "static/js/2.f8fab773.chunk.js",
-    "static/css/main.db277111.chunk.css",
-    "static/js/main.5f4be782.chunk.js"
+    "static/js/2.9a9aedfc.chunk.js",
+    "static/css/main.9c41fcd8.chunk.css",
+    "static/js/main.2fadbdc1.chunk.js"
   ]
 }
