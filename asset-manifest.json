@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/alantram.com/static/css/main.9191a222.chunk.css",
-    "main.js": "/alantram.com/static/js/main.a0cd4410.chunk.js",
-    "main.js.map": "/alantram.com/static/js/main.a0cd4410.chunk.js.map",
+    "main.js": "/alantram.com/static/js/main.d0d9aa82.chunk.js",
+    "main.js.map": "/alantram.com/static/js/main.d0d9aa82.chunk.js.map",
     "runtime-main.js": "/alantram.com/static/js/runtime-main.e3d72fdb.js",
     "runtime-main.js.map": "/alantram.com/static/js/runtime-main.e3d72fdb.js.map",
     "static/css/2.98c9c260.chunk.css": "/alantram.com/static/css/2.98c9c260.chunk.css",
@@ -180,6 +180,6 @@
     "static/css/2.98c9c260.chunk.css",
     "static/js/2.b54b9dd7.chunk.js",
     "static/css/main.9191a222.chunk.css",
-    "static/js/main.a0cd4410.chunk.js"
+    "static/js/main.d0d9aa82.chunk.js"
   ]
 }
