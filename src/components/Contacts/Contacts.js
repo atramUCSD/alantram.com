@@ -150,7 +150,9 @@ function Contacts() {
                     message: message,
                 };
 
-                axios.post(contactsData.sheetAPI, responseData).then((res) => {
+                setMessage('Contact Form Underdevelopment! Please contact me via email or social media links');
+
+               {/*  axios.post(contactsData.sheetAPI, responseData).then((res) => {
                     console.log('success');
                     setSuccess(true);
                     setErrMsg('');
@@ -160,12 +162,14 @@ function Contacts() {
                     setMessage('');
                     setOpen(false);
                 });
+    */}
+
             } else {
                 setErrMsg('Invalid email');
                 setOpen(true);
             }
         } else {
-            setErrMsg('Enter all the fields');
+            setErrMsg('Contact Form Underdevelopment! Please contact me via email or social media links');
             setOpen(true);
         }
     };
@@ -188,7 +192,7 @@ function Contacts() {
                                 <input
                                     placeholder='John Doe'
                                     value={name}
-                                    onChange={(e) => setName(e.target.value)}
+                                    onChange={(e) => setName('e.target.value')}
                                     type='text'
                                     name='Name'
                                     className={`form-input ${classes.input}`}
@@ -218,7 +222,7 @@ function Contacts() {
                                     Message
                                 </label>
                                 <textarea
-                                    placeholder='Type your message....'
+                                    placeholder='Contact Form Underdevelopment! Please contact me via email or social media links'
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                     type='text'
@@ -232,7 +236,8 @@ function Contacts() {
                                     type='submit'
                                     className={classes.submitBtn}
                                 >
-                                    <p>{!success ? 'Send' : 'Sent'}</p>
+                                    {/* get contact form done */}
+                                    <p>{!success ? 'Under Development' : 'Sent'}</p> 
                                     <div className='submit-icon'>
                                         <AiOutlineSend
                                             className='send-icon'

@@ -1,6 +1,8 @@
+import aboutImage from '../assets/png/about-image.jpg'
+
 export const aboutData = {
     title: "Who I am",
-    description1: "My name's Jane. I'm a web designer and developer based in Southampton, UK.",
-    description2: "During the day I work as a lead developer at a local agency and in the evening I  work on freelance projects and utilize the time to built my own products. I spent my leisure hours writing articles and poetry. Right now I'm also trying a hand at machine learning and AI. I love to learn and explore new arenas.",
-    image: 2
+    description1: "My name's Alan Tram. I'm an avid fan of sports, games, and technology. Many consider me an enthusiastic person who has a hunger to learn and grow. This mindset has led me to have a very diverse skillset that allows me to be an instant contributor to any team. ",
+    description2: "Ever since I was young, my immigrant grandmother always asked me to assist her with various technical problems. I know very well she didn't want to rely on me so frequently, but many new technical/digital products at the time lacked support options that could fit her learning curve. There exists phyiscal and mental barriers that impede certain user groups from using technologies to their intended potential which I hope to address someday.",
+    image: aboutImage
 }

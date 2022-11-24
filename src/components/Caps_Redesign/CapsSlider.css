@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200&display=swap");
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+
+/** Image Slider CSS*/
+
+/* Replace #fc4958 with color: #029D71; */
+
+.slider { 
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+
+}
+
+@media screen and (max-width: 425px){
+  .header{
+    font-size: 1.5rem;
+  }
+}
+
+#slide-element{
+  width: 40vw;
+  border-radius: 3rem;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

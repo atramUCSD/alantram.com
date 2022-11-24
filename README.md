@@ -300,7 +300,7 @@ Eg:
 export const headerData = {
     name: '-- YOUR NAME --',
     title: '-- YOUR TITLE --',
-    desciption:'-- DESCRIPTION --',
+    description:'-- DESCRIPTION --',
     image: '-- IMAGE --',
     resumePdf: ''
 }
@@ -313,7 +313,7 @@ import profileImg from '../assets/png/profileImg'
 export const headerData = {
     name: '-- YOUR NAME --',
     title: '-- YOUR TITLE --',
-    desciption:'-- DESCRIPTION --',
+    description:'-- DESCRIPTION --',
     image: profileImg,
     resumePdf: resume
 }

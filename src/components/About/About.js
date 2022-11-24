@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import './About.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { aboutData } from '../../data/aboutData'
-
+import aboutImage from '../../assets/png/about-image.jpg'
 
 
 function About() {
@@ -23,7 +23,7 @@ function About() {
                 </div>
                 <div className="about-img">
                     <img 
-                        src={aboutData.image === 1 ? theme.aboutimg1 : theme.aboutimg2}  
+                        src={aboutImage}  
                         alt="" 
                     />
                 </div>

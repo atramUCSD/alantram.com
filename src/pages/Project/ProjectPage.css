@@ -83,3 +83,51 @@
         font-size: 2.5rem;
     }
 }
+
+.project--showcaseBtn > a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.5s 0.3s;
+}
+
+.project--showcaseBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project--showcaseBtn > a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.5s 0.3s;
+}
+
+.guide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 3.5rem;
+}
+
+.guide--image{
+    width: 20vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .guide--image{
+        width: 60vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -139,15 +139,6 @@
 }
 
 .review--content{
-    margin: 0 auto;
-    width: 90%;
-    height: 250px;
-    border-radius: 200px;
-
-    box-sizing: border-box;
-    padding: 30px 40px;
-    padding-top: 60px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,11 +165,6 @@
 
 @media (max-width: 992px) {
 
-    .testimonials {
-        height: 100%;
-        padding-bottom: 2rem;
-    }
-
   .testimonials--header h1{
     font-size: 3rem;
     margin-top: 1.75rem;
@@ -187,11 +173,6 @@
   .testimonials--body .quote{
       font-size: 3.5rem;
   }
-
-
-  .review--content{
-      border-radius: 50px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -199,18 +180,8 @@
   .testimonials--header h1{
     font-size: 2.5rem;
   }
-  .testimonials--body{
-    width: 100%;
-  }
   .testimonials--body button{
     display: none;
-  }
-  .testimonials--slider {
-    width: 90%;
-  }
-
-  .review--content{
-      border-radius: 50px;
   }
 }
 
@@ -218,10 +189,6 @@
   .review--img {
     margin: initial;
     align-self: flex-start;
-  }
-  .review--content{
-      border-radius: 20px;
-      min-height: 300px;
   }
   .review--content p{
       font-size: 0.9rem;

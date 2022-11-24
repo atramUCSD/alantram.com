@@ -3,10 +3,77 @@ import { makeStyles } from '@material-ui/core/styles';
 import { FaPlay, FaCode, FaReadme } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 
+import { Link } from 'react-router-dom'
+
 import placeholder from '../../../assets/png/placeholder.png';
+import CAPSThumbnail from '../../../assets/png/CAPS-Thumbnail.png';
+import ReCODEThumbnail from '../../../assets/png/ReCODE-Thumbnail.png';
+import sonyThumbnail from '../../../assets/png/sony/Sony-logo.png';
+
 import './SingleProject.css';
 
 function SingleProject({ id, name, desc, tags, code, casestudy, demo, image, theme }) {
+
+    function nullCode(){
+        if(code === null){
+            return;
+        } else {
+            return (
+                <a
+                href={code}
+                target='_blank'
+                rel='noreferrer'
+                className={classes.iconBtn}
+                aria-labelledby={`${name
+                    .replace(' ', '-')
+                    .toLowerCase()} ${name
+                    .replace(' ', '-')
+                    .toLowerCase()}-code`}>
+                    <FaCode
+                        id={`${name.replace(' ', '-').toLowerCase()}-code`}className={classes.icon}aria-label='Code'
+                    />
+                </a>
+            )
+        }
+    }
+
+    function nullCasestudy(){
+        if(casestudy === null){
+            return;
+        } else if(casestudy == '/Sony'){
+            return (
+                <Link to = {casestudy} className={classes.iconBtn}>
+                    <FaReadme
+                        id={`${name.replace(' ', '-').toLowerCase()}-readme`}className={classes.icon}aria-label='Readme'
+                    />
+                </Link>
+            )
+        }
+        else {
+            return (
+                <a
+                href={casestudy}
+                target='_blank'
+                rel='noreferrer'
+                className={classes.iconBtn}
+                aria-labelledby={`${name
+                    .replace(' ', '-')
+                    .toLowerCase()} ${name
+                    .replace(' ', '-')
+                    .toLowerCase()}-demo`}
+            >
+                <FaReadme
+                    id={`${name
+                        .replace(' ', '-')
+                        .toLowerCase()}-demo`}
+                    className={classes.icon}
+                    aria-label='Readme'
+                />
+            </a>
+            )
+    }
+}
+
     const useStyles = makeStyles((t) => ({
         iconBtn: {
             display: 'flex',
@@ -48,7 +115,7 @@ function SingleProject({ id, name, desc, tags, code, casestudy, demo, image, the
                     >
                         {name}
                     </h2>
-                    <img src={image ? image : placeholder} alt={name} />
+                    <img style = {{height:"50%", borderRadius:"10px"}} src={image ? image : placeholder} alt={name} />
                     <div className='project--showcaseBtn'>
                         <a
                             href={demo}
@@ -69,6 +136,7 @@ function SingleProject({ id, name, desc, tags, code, casestudy, demo, image, the
                                 aria-label='Demo'
                             />
                         </a>
+                        {/* 
                         <a
                             href={casestudy}
                             target='_blank'
@@ -88,6 +156,9 @@ function SingleProject({ id, name, desc, tags, code, casestudy, demo, image, the
                                 aria-label='Readme'
                             />
                         </a>
+                        */}
+                        {nullCasestudy()}
+                        {/*
                         <a
                             href={code}
                             target='_blank'
@@ -107,6 +178,10 @@ function SingleProject({ id, name, desc, tags, code, casestudy, demo, image, the
                                 aria-label='Code'
                             />
                         </a>
+                        
+                        {/* Creat a function for projects without code */}
+                        {nullCode()}
+
                     </div>
                 </div>
                 <p

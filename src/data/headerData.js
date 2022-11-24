@@ -4,7 +4,7 @@ import profile from '../assets/png/self-gradient.png'
 export const headerData = {
     name: 'Alan Tinh Tram',
     title: "Design Technologist | UI Developer | UX Researcher",
-    desciption:"Ever since I was young, my immigrant grandmother always asked me to assist her technical problems. With that experience fueling my career choice, there exists phyiscal and mental barriers that impede certain user groups from using technologies to their intended potential which I hope to accomodate through my work.",
+    description:"I'm a recent UCSD graduate with a B.S. in HCI and Design. I am currently looking for work as a Web/UX/UI Designer, Design Technologist, Visual Interaction Designer, or Product Designer. Scroll down to learn about me and my work more!",
     image: profile,
     resumePdf: resume
 }

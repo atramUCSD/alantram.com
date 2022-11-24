@@ -1,6 +1,7 @@
 .about {
     min-height: 100vh;
     position: relative;
+    padding-bottom: 10%;
 }
 
 .about .line-styling{
@@ -115,8 +116,7 @@
     }
 
     .about-img > img {
-        width: 250px;
-        flex: 0.4;
+        display: none;
     }
 
 }
@@ -155,6 +155,6 @@
     }
 
     .about-img > img {
-        width: 200px;
+        display: none;
     }
 }

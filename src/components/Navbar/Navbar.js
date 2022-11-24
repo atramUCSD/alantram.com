@@ -229,6 +229,8 @@ function Navbar() {
                             </NavLink>
                         </Fade>
 
+                        {/*
+
                         <Fade left>
                             <NavLink
                                 to='/#services'
@@ -264,6 +266,8 @@ function Navbar() {
                                 </div>
                             </NavLink>
                         </Fade>
+
+                    */}
 
                         <Fade left>
                             <NavLink

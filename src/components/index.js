@@ -17,5 +17,10 @@ export { default as Achievement } from './Achievement/Achievement'
 export { default as WhatIs } from './Sony/WhatIs'
 export { default as Timeline } from './Sony/Timeline'
 export { default as SonySkills } from './Sony/SonySkills'
+export {default as SonyMedia} from './Sony/SonyMedia'
+
+export { default as CapsWhatIs } from './Caps_Redesign/WhatIs'
+export { default as CapsTimeline } from './Caps_Redesign/Timeline'
+export { default as Caps_RedesignSkills } from './Caps_Redesign/Caps_RedesignSkills'
 
 export { default as BackToTop } from'./BackToTop/BackToTop'

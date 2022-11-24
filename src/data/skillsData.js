@@ -11,11 +11,12 @@
     'Git',
     'Qualtrics',
     'Python',
-    'C++',
     'Markdown',
-    'Java',
     'Wordpress',
     'Pandas',
+    'Sketch',
+    'Microsoft Office',
+    'Adobe XD',
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

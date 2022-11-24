@@ -61,10 +61,11 @@
 .about-img {
     margin-top: 40px;
     pointer-events: none;
+    width: 500px;
 }
 
 .about-img > img {
-    width: 380px;
+    width: 500px;
     flex: 0.5;
 }
 
@@ -79,7 +80,7 @@
     }
 
     .about-img>img {
-        width: 300px;
+      width: 500px;
     } 
 }
 

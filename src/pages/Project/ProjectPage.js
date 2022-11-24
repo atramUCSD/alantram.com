@@ -5,12 +5,16 @@ import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import { AiOutlineHome } from "react-icons/ai";
 
+import { FaPlay, FaCode, FaReadme } from 'react-icons/fa';
+
 import './ProjectPage.css'
 import { SingleProject } from '../../components';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
 import { headerData } from '../../data/headerData'
+
+import projectGuide from '../../assets/png/Project-Guide.png';
 
 function ProjectPage() {
 
@@ -83,6 +87,11 @@ function ProjectPage() {
                <div className="projectPage-search">
                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search project..." className={classes.search} />
                </div>
+
+               <div className = "guide"> 
+                <img className = "guide--image" src={projectGuide} alt="Project Guide" />
+               </div>
+
                <div className="project-container">
                    <Grid className="project-grid" container direction="row" alignItems="center" justifyContent="center">
                         {filteredArticles.map(project => (

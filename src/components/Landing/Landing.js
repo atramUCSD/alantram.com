@@ -37,6 +37,7 @@ function Landing() {
             [t.breakpoints.down('sm')]: {
                 width: '180px',
             },
+            ["@media (max-width:425px)"]: { width: '150px', height: '35px', fontSize: '0.7rem' },
         },
         contactBtn: {
             backgroundColor: theme.primary,
@@ -119,18 +120,29 @@ function Landing() {
                     >
                         <h6>{headerData.title}</h6>
                         <h1>{headerData.name}</h1>
-                        <p>{headerData.desciption}</p>
+                        <p>{headerData.description}</p>
 
-                        <div className='lcr-buttonContainer'>
+                        <div className='lcr-buttonContainer' style={{justifyContent: "space-between"}}>
                             {headerData.resumePdf && (
                                 <a
-                                    href={headerData.resumePdf}
+                                    href={"https://drive.google.com/file/d/1U3BOpNc1C_ZRh7z0ADNk4Fr8wyq3lj6X/view?usp=sharing"}
                                     download='resume'
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    <Button className={classes.resumeBtn}>
-                                       Resume
+                                    <Button className={classes.resumeBtn} style={{marginTop: '2vw', marginRight:'.5rem'}}>
+                                       Graphic Resume
+                                    </Button>
+                                </a>
+                            )}
+                            {headerData.resumePdf && (
+                                <a
+                                    href={"https://drive.google.com/file/d/1fIIfXVD0gHVWBgfXACuT397c2-EWpIQn/view?usp=sharing"}
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    <Button className={classes.resumeBtn} style={{marginTop: '2vw', marginRight:'.5rem'}}>
+                                       Text-Based Resume
                                     </Button>
                                 </a>
                             )}
@@ -140,7 +152,7 @@ function Landing() {
                                 spy='true'
                                 duration={2000}
                             >
-                                <Button className={classes.contactBtn}>
+                                <Button className={classes.contactBtn} style={{marginTop: '2vw', marginRight:'.5rem'}}>
                                     Contact
                                 </Button>
                             </NavLink>

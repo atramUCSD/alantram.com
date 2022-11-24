@@ -17,7 +17,7 @@ function Testimonials() {
         dots: true,
         adaptiveHeight: true,
         infinite: true,
-        speed: 800,
+        speed: 1200,
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -46,13 +46,9 @@ function Testimonials() {
                     style={{ backgroundColor: theme.primary }}
                 >
                     <div className='testimonials--header'>
-                        <h1 style={{ color: theme.secondary }}>Testimonials</h1>
+                        <h1 style={{ color: theme.secondary }}>Portfolio Evolution</h1>
                     </div>
                     <div className='testimonials--body'>
-                        <FaQuoteLeft
-                            className='quote'
-                            style={{ color: theme.secondary }}
-                        />
                         <div
                             className='testimonials--slider'
                             style={{ backgroundColor: theme.primary }}
@@ -60,31 +56,27 @@ function Testimonials() {
                             <Slider {...settings} ref={sliderRef}>
                                 {testimonialsData.map((test) => (
                                     <div
-                                        className='single--testimony'
                                         key={test.id}
                                     >
-                                        <div className='testimonials--container'>
+                                        <div>
                                             <div
-                                                className='review--img'
                                                 style={{
                                                     backgroundColor:
-                                                        theme.secondary,
+                                                        theme.primary,
                                                 }}
                                             >
-                                                <img
+                                                <img style={{width:'100%', height:'50%', justifyContent:'center', alignItems:'center', border:"3px solid black"}}
                                                     src={test.image}
                                                     alt={test.name}
                                                 />
                                             </div>
-                                            <div
-                                                className='review--content'
+                                            <div className='review--content'
                                                 style={{
                                                     backgroundColor:
                                                         theme.secondary,
                                                     color: theme.tertiary,
                                                 }}
                                             >
-                                                <p>{test.text}</p>
                                                 <h1>{test.name}</h1>
                                                 <h4>{test.title}</h4>
                                             </div>

@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
 import { HiArrowRight } from "react-icons/hi";
+import projectGuide from '../../assets/png/Project-Guide.png';
 
 import './Projects.css'
 import SingleProject from './SingleProject/SingleProject';
@@ -50,6 +51,11 @@ function Projects() {
                     <div className="projects--header">
                         <h1 style={{color: theme.primary}}>Projects</h1>
                     </div>
+
+                    <div className = "guide"> 
+                        <img className = "guide--image" src={projectGuide} alt="Project Guide"/>
+                    </div>
+
                     <div className="projects--body">
                         <div className="projects--bodyContainer">
                             {projectsData.slice(0, 3).map(project => (
