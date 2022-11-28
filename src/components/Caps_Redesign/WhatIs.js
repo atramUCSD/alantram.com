@@ -34,7 +34,8 @@ function CapsWhatIs() {
                         <dl> - Improving intuitiveness of drop downs, menus, hyperlinks, etc.</dl>
                     </ul>
 
-                    <p style={{color:theme.tertiary80}}>{caps_redesignData.description1}<br/><br/>{caps_redesignData.description2}</p>
+                   {/* <p style={{color:theme.tertiary80}}>{caps_redesignData.description1}<br/><br/>{caps_redesignData.description2}</p> */} 
+                   
                 </div>
                 <div className="about-img">
                     <img 

@@ -22,5 +22,6 @@ export {default as SonyMedia} from './Sony/SonyMedia'
 export { default as CapsWhatIs } from './Caps_Redesign/WhatIs'
 export { default as CapsTimeline } from './Caps_Redesign/Timeline'
 export { default as Caps_RedesignSkills } from './Caps_Redesign/Caps_RedesignSkills'
+export {default as CapsMedia} from './Caps_Redesign/CapsMedia'
 
 export { default as BackToTop } from'./BackToTop/BackToTop'
