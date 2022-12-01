@@ -58,7 +58,7 @@ function SonyMedia() {
 
             <div class="container2">
             <div className="column-image">
-                    <img src= {capsPainPoints} style={{ backgroundColor:"white"}}/>
+                    <img src= {capsPainPoints} style={{ backgroundColor:"white", borderRadius: "20px"}}/>
                  </div>
                 
                 <div className="about-description">

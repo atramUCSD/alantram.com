@@ -16,15 +16,15 @@ export const experienceData = [
     {
         id: 3,
         company: 'Sony Connected Learning Pathways',
-        jobtitle: 'Product Design and UX Research Intern',
+        jobtitle: 'Product Design Intern',
         startYear: '2021',
         endYear: '2021',
 
     },
     {
         id: 4,
-        company: 'ReCode Health UI/UX Researcher and Developer',
-        jobtitle: 'Product Design and UX Research Intern',
+        company: 'ReCode Health',
+        jobtitle: 'Front-end Developer and Visual Designer ',
         startYear: '2021',
         endYear: '2022',
 
