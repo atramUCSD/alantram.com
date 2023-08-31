@@ -23,7 +23,7 @@ export const projectsData = [
     {
         id: 2,
         projectName: 'ReCODE Health | Old Casestudy version',
-        projectDesc: 'First project within a research organization, involving mockups, user testing, and my first React web coding experience.',
+        projectDesc: 'First project within a research organization, involving mockups, user testing, and my first React scripting experience.',
         // ... (other properties)
         image: projectImages[1],
         code: 'https://github.com/ReCODE-Health',
