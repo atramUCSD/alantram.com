@@ -3,6 +3,7 @@ import Graduation from '../../assets/png/experience/Graduation.png';
 import Research from '../../assets/png/experience/Research.png';
 import SonyIntern from '../../assets/png/experience/SonyIntern.png';
 import UltimateLabs from '../../assets/png/experience/UltimateLabs.png';
+import GDIT from '../../assets/png/experience/GDIT-Experience.png';
 
 export const SliderData = [
   {
@@ -19,5 +20,8 @@ export const SliderData = [
   },
   {
     image: UltimateLabs
+  },
+  {
+    image: GDIT
   }
 ];

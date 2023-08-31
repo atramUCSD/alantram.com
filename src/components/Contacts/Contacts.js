@@ -141,7 +141,7 @@ function Contacts() {
 
     const handleContactForm = (e) => {
         e.preventDefault();
-
+    
         if (name && email && message) {
             if (isEmail(email)) {
                 const responseData = {
@@ -149,30 +149,43 @@ function Contacts() {
                     email: email,
                     message: message,
                 };
-
-                setMessage('Contact Form Underdevelopment! Please contact me via email or social media links');
-
-               {/*  axios.post(contactsData.sheetAPI, responseData).then((res) => {
-                    console.log('success');
-                    setSuccess(true);
-                    setErrMsg('');
-
-                    setName('');
-                    setEmail('');
-                    setMessage('');
-                    setOpen(false);
-                });
-    */}
-
+    
+                setMessage('Submitting...');
+    
+                const token = 'kwdce8jlhglzfin54zwd12v6pbsygcmbf9qdlkju'; // Replace with your actual authentication token
+                const headers = {
+                    'Authorization': `Bearer ${token}`,
+                    // Other headers as needed
+                };
+    
+                axios.post(contactsData.sheetAPI, responseData, { headers })
+                    .then((res) => {
+                        console.log('Success response:', res);
+                        setSuccess(true);
+                        setErrMsg('');
+                        setMessage('Form submitted successfully.');
+    
+                        // Reset the input fields
+                        setName('');
+                        setEmail('');
+                        setMessage('');
+                        setOpen(false);
+                    })
+                    .catch((error) => {
+                        console.error('Error response:', error);
+                        setErrMsg('An error occurred while submitting the form.');
+                        setOpen(true);
+                    });
             } else {
                 setErrMsg('Invalid email');
                 setOpen(true);
             }
         } else {
-            setErrMsg('Contact Form Underdevelopment! Please contact me via email or social media links');
+            setErrMsg('Please fill in all fields.');
             setOpen(true);
         }
     };
+    
 
     return (
         <div
@@ -190,13 +203,14 @@ function Contacts() {
                                     Name
                                 </label>
                                 <input
-                                    placeholder='John Doe'
-                                    value={name}
-                                    onChange={(e) => setName('e.target.value')}
-                                    type='text'
-                                    name='Name'
-                                    className={`form-input ${classes.input}`}
+                                placeholder='John Doe'
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                type='text'
+                                name='Name'
+                                className={`form-input ${classes.input}`}
                                 />
+
                             </div>
                             <div className='input-container'>
                                 <label
@@ -222,7 +236,7 @@ function Contacts() {
                                     Message
                                 </label>
                                 <textarea
-                                    placeholder='Contact Form Underdevelopment! Please contact me via email or social media links'
+                                    placeholder='Type your message here!'
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                     type='text'
@@ -237,7 +251,7 @@ function Contacts() {
                                     className={classes.submitBtn}
                                 >
                                     {/* get contact form done */}
-                                    <p>{!success ? 'Under Development' : 'Sent'}</p> 
+                                    <p>{!success ? 'Send' : 'Sent'}</p> 
                                     <div className='submit-icon'>
                                         <AiOutlineSend
                                             className='send-icon'

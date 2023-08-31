@@ -8,17 +8,18 @@ export const experienceData = [
     },
     {
         id: 2,
-        company: 'Haijun Xia Apprenticeship',
-        jobtitle: 'Programmer and Designer',
-        startYear: '2019',
-        endYear: '2020'
-    },
-    {
-        id: 3,
         company: 'Sony Connected Learning Pathways',
         jobtitle: 'Product Design Intern',
         startYear: '2021',
         endYear: '2021',
+
+    },
+    {
+        id: 3,
+        company: 'UCSD Academic Researcher',
+        jobtitle: 'Programmer, Designer, and Researcher',
+        startYear: '2019',
+        endYear: '2022',
 
     },
     {
@@ -30,11 +31,12 @@ export const experienceData = [
 
     },
     {
-        id: 4,
-        company: 'Elizabeth Eikey Apprenticeship',
-        jobtitle: 'Programmer, Designer, and Researcher',
-        startYear: '2021',
+        id: 5,
+        company: 'General Dynamics Information Technology (GDIT)',
+        jobtitle:'UI/UX & Web Dveloper Senior',
+        startYear: '2023',
         endYear: 'Present',
 
     },
+    
 ]

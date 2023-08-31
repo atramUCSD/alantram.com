@@ -22,7 +22,7 @@ function CapsWhatIs() {
                 <div className="about-description">
                     <h2 style={{color: theme.primary}}>{caps_redesignData.title}</h2>
                     
-                    <dd> CAPS' Goals </dd> 
+                    <dd> Who is our Stakeholder and What are their goals  </dd> 
                     <dl> Students consult with CAPS about a variety of more specific personal, academic and relationship problems. No problem or concern is too big or small. </dl> 
                     <dl> CAPS is committed to promoting student mental health and well-being at an individual and organizational level, as well as the preservation and sustainability of an environment conducive to growth and lifelong learning. </dl>
 
@@ -35,7 +35,7 @@ function CapsWhatIs() {
                     </ul>
 
                    {/* <p style={{color:theme.tertiary80}}>{caps_redesignData.description1}<br/><br/>{caps_redesignData.description2}</p> */} 
-                   
+
                 </div>
                 <div className="about-img">
                     <img 

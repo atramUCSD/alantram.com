@@ -56,6 +56,7 @@
     font-size: 1.25rem;
     color: #e0d9d9;
     font-family: var(--primaryFont);
+    text-align:left;
 }
 
 .about-img {

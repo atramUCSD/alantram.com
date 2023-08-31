@@ -4,41 +4,43 @@ import three from '../assets/png/sony/Sony-logo.png';
 import four from '../assets/svg/Restaurant-Thumbnail.svg';
 import five from '../assets/svg/projects/five.svg'
 import six from '../assets/svg/projects/six.svg'
-import seven from '../assets/svg/projects/seven.svg'
-import eight from '../assets/svg/projects/eight.svg'
 
+// ... (other imports)
+
+const projectImages = [one, two, three, four, five, six];
 
 export const projectsData = [
     {
         id: 1,
         projectName: 'CAPS Redesign | Old Casestudy version',
         projectDesc: 'I sought to redesign the CAPS website to make it more user friendly and accessible. My first attempt at a full-scale test of my skillset',
-        tags: ['React', 'CSS', 'Material Ui'],
+        // ... (other properties)
+        image: projectImages[0],
         code: 'https://github.com/atramUCSD/Caps-Redesign',
         demo: 'https://ucsdcloud-my.sharepoint.com/:p:/r/personal/atram_ucsd_edu/Documents/CAPS%20Redesign.pptx?d=w108b2bccc1b644dc800ed90305819830&csf=1&web=1&e=XGdJxA&nav=eyJzSWQiOjI4NywiY0lkIjowfQ',
-        casestudy: '/Caps_Redesign',
-        image: one
+        casestudy: 'https://atramucsd.github.io/My-Website/#/CAPS_Redesign'
     },
     {
         id: 2,
         projectName: 'ReCODE Health | Old Casestudy version',
-        projectDesc: 'This was my first project under an established Research organization versus projects that I ideated myself. I created multiple mockups, conducted user testing, and it was my first implementing web code with React. ',
-        tags: ['Django', 'Tailwind CSS'],
+        projectDesc: 'First project within a research organization, involving mockups, user testing, and my first React web coding experience.',
+        // ... (other properties)
+        image: projectImages[1],
         code: 'https://github.com/ReCODE-Health',
         demo: 'https://core.recode.health/',
-        casestudy: 'https://atramucsd.github.io/My-Website/#/ReCODE',
-        image: two
+        casestudy: 'https://atramucsd.github.io/My-Website/#/ReCODE'
     },
     {
         id: 3,
         projectName: 'Sony Pathways Program',
         projectDesc: "I worked with a team of 3 other students to mock a prototype for a new TV remote that would be seen by Sony employees.",
-        tags: ['Django', 'CSS', 'Material Ui'],
-        code: null,
+        // ... (other properties)
+        image: projectImages[2],
         demo: 'https://docs.google.com/presentation/d/1UUlGkBNYeRQN5X7cGvU7_KteP1yDBg9G/edit?usp=sharing&ouid=113733715422948884241&rtpof=true&sd=true',
-        casestudy: '/Sony',
-        image: three
+        casestudy: '/Sony'
     },
+   
+
     {
         id: 4,
         projectName: 'Restaurant Website Redesign | Casestudy under development',

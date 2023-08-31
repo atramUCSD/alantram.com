@@ -1,12 +1,8 @@
 import React, { useContext, useRef } from 'react';
-
 import Slider from 'react-slick';
-
 import { FaQuoteLeft, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
-
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { testimonialsData } from '../../data/testimonialsData';
-
 import './Testimonials.css';
 
 function Testimonials() {
@@ -15,19 +11,29 @@ function Testimonials() {
 
     const settings = {
         dots: true,
-        adaptiveHeight: true,
         infinite: true,
-        speed: 1200,
-        arrows: false,
+        speed: 800, // Adjust the speed for smoother sliding
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        margin: 3,
-        loop: true,
-        autoplaySpeed: 3000,
-        draggable: true,
-        swipeToSlide: true,
-        swipe: true,
+        autoplaySpeed: 5000, // Set a longer interval for autoplay
+        pauseOnHover: true, // Pause autoplay on hover
+        pauseOnDotsHover: true,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
     };
 
     const gotoNext = () => {
@@ -41,45 +47,37 @@ function Testimonials() {
     return (
         <>
             {testimonialsData.length > 0 && (
-                <div
-                    className='testimonials'
-                    style={{ backgroundColor: theme.primary }}
-                >
+                <div className='testimonials' style={{ backgroundColor: theme.secondary }}>
                     <div className='testimonials--header'>
-                        <h1 style={{ color: theme.secondary }}>Portfolio Evolution</h1>
+                        <h1 style={{ color: theme.primary }}>Portfolio Evolution</h1>
                     </div>
                     <div className='testimonials--body'>
-                        <div
-                            className='testimonials--slider'
-                            style={{ backgroundColor: theme.primary }}
-                        >
+                        <div className='testimonials--slider' style={{ backgroundColor: theme.secondary }}>
                             <Slider {...settings} ref={sliderRef}>
                                 {testimonialsData.map((test) => (
-                                    <div
-                                        key={test.id}
-                                    >
-                                        <div>
-                                            <div
+                                    <div key={test.id}>
+                                        <div style={{ backgroundColor: theme.primary }}>
+                                            <img
                                                 style={{
-                                                    backgroundColor:
-                                                        theme.primary,
+                                                    width: '100%',
+                                                    height: '50%',
+                                                    justifyContent: 'center',
+                                                    alignItems: 'center',
+                                                    border: '3px solid black',
                                                 }}
-                                            >
-                                                <img style={{width:'100%', height:'50%', justifyContent:'center', alignItems:'center', border:"3px solid black"}}
-                                                    src={test.image}
-                                                    alt={test.name}
-                                                />
-                                            </div>
-                                            <div className='review--content'
-                                                style={{
-                                                    backgroundColor:
-                                                        theme.secondary,
-                                                    color: theme.tertiary,
-                                                }}
-                                            >
-                                                <h1>{test.name}</h1>
-                                                <h4>{test.title}</h4>
-                                            </div>
+                                                src={test.image}
+                                                alt={test.name}
+                                            />
+                                        </div>
+                                        <div
+                                            className='review--content'
+                                            style={{
+                                                backgroundColor: theme.primary,
+                                                color: theme.tertiary,
+                                            }}
+                                        >
+                                            <h1>{test.name}</h1>
+                                            <h4>{test.title}</h4>
                                         </div>
                                     </div>
                                 ))}
@@ -87,20 +85,20 @@ function Testimonials() {
                             <button
                                 className='prevBtn'
                                 onClick={gotoPrev}
-                                style={{ backgroundColor: theme.secondary }}
+                                style={{ backgroundColor: theme.primary }}
                             >
                                 <FaArrowLeft
-                                    style={{ color: theme.primary }}
+                                    style={{ color: theme.secondary}}
                                     aria-label='Previous testimonial'
                                 />
                             </button>
                             <button
                                 className='nextBtn'
                                 onClick={gotoNext}
-                                style={{ backgroundColor: theme.secondary }}
+                                style={{ backgroundColor: theme.primary }}
                             >
                                 <FaArrowRight
-                                    style={{ color: theme.primary }}
+                                    style={{ color: theme.secondary }}
                                     aria-label='Next testimonial'
                                 />
                             </button>
