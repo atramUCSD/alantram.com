@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/alantram.com/static/css/main.d54fbb88.chunk.css",
-    "main.js": "/alantram.com/static/js/main.5348f052.chunk.js",
-    "main.js.map": "/alantram.com/static/js/main.5348f052.chunk.js.map",
+    "main.css": "/alantram.com/static/css/main.1f8bc13e.chunk.css",
+    "main.js": "/alantram.com/static/js/main.e358b87f.chunk.js",
+    "main.js.map": "/alantram.com/static/js/main.e358b87f.chunk.js.map",
     "runtime-main.js": "/alantram.com/static/js/runtime-main.4d185a82.js",
     "runtime-main.js.map": "/alantram.com/static/js/runtime-main.4d185a82.js.map",
     "static/css/2.98c9c260.chunk.css": "/alantram.com/static/css/2.98c9c260.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.aa204fa3.chunk.js.map": "/alantram.com/static/js/3.aa204fa3.chunk.js.map",
     "index.html": "/alantram.com/index.html",
     "static/css/2.98c9c260.chunk.css.map": "/alantram.com/static/css/2.98c9c260.chunk.css.map",
-    "static/css/main.d54fbb88.chunk.css.map": "/alantram.com/static/css/main.d54fbb88.chunk.css.map",
+    "static/css/main.1f8bc13e.chunk.css.map": "/alantram.com/static/css/main.1f8bc13e.chunk.css.map",
     "static/js/2.e6624d7a.chunk.js.LICENSE.txt": "/alantram.com/static/js/2.e6624d7a.chunk.js.LICENSE.txt",
     "static/media/Accessibility.67a9c138.svg": "/alantram.com/static/media/Accessibility.67a9c138.svg",
     "static/media/index.css": "/alantram.com/static/media/BestermindRegular.e58a1922.ttf",
@@ -183,7 +183,7 @@
     "static/js/runtime-main.4d185a82.js",
     "static/css/2.98c9c260.chunk.css",
     "static/js/2.e6624d7a.chunk.js",
-    "static/css/main.d54fbb88.chunk.css",
-    "static/js/main.5348f052.chunk.js"
+    "static/css/main.1f8bc13e.chunk.css",
+    "static/js/main.e358b87f.chunk.js"
   ]
 }
