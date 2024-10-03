@@ -3,7 +3,7 @@ import profile from '../assets/png/self-gradient.png'
 import infoSession from '../assets/png/sony/infoSession.png'
 
 // Template for project timeline data, to be replaced with actual details.
-export const sonyTimeline = [
+export const cdcTimeline = [
     {
         id: 1,
         title: 'Project Phase 1', // Placeholder for the project phase or title

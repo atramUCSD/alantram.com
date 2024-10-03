@@ -1,0 +1,70 @@
+
+/** Image Slider CSS*/
+
+/* Replace #fc4958 with color: #029D71; */
+
+.slider {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.header{
+  padding-top: 10vw;
+  padding-bottom: 3vw;
+  font-size: 1vw;
+  text-align: center;
+  font-family: var(--secondaryFont);
+  color: rgb(255, 255, 255);
+  font-style: normal;
+
+}
+
+.caption{
+  position:relative;
+  top:-20vh;
+  padding-top: 5vh;
+}
+
+@media screen and (max-width: 1024px){
+  .caption{
+    display: none;
+  };
+
+  .slider{
+    display: none;
+  }
+
+  .slide.active
+  {
+    display: none;
+  }
+  .slide{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .header{
+    font-size: 1.5rem;
+  }
+}
+
+#slide-element{
+  width: 45vw;
+  border-radius: 3rem;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
