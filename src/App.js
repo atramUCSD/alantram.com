@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { HashRouter } from 'react-router-dom';
 
 import { ThemeContext } from './contexts/ThemeContext';
-import { BlogPage, ProjectPage, Sony, Caps_Redesign } from './pages'
+import { BlogPage, ProjectPage, Sony, Caps_Redesign, CDC } from './pages'
 
 import Main from "./pages/Main/Main";
 
@@ -35,6 +35,7 @@ function App() {
           <Route path="/projects" exact component={ProjectPage} />
           <Route path="/Sony" exact component={Sony} />
           <Route path="/Caps_Redesign" exact component={Caps_Redesign} />
+          <Route path="/CDC" exact component={CDC} />
           <Redirect to='/' /> 
         </Switch>
       </HashRouter>

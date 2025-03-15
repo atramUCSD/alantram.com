@@ -19,6 +19,10 @@ export { default as Timeline } from './Sony/Timeline'
 export { default as SonySkills } from './Sony/SonySkills'
 export {default as SonyMedia} from './Sony/SonyMedia'
 
+export { default as Captions } from './CDC/Captions'; // Use correct casing
+export { default as Main_Page } from './CDC/Main_Page'; // Check this file name as well
+export { default as CdcSkills} from './CDC/CdcSkills';
+
 export { default as CapsWhatIs } from './Caps_Redesign/WhatIs'
 export { default as CapsTimeline } from './Caps_Redesign/Timeline'
 export { default as Caps_RedesignSkills } from './Caps_Redesign/Caps_RedesignSkills'

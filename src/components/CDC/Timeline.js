@@ -6,8 +6,8 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import './Timeline.scss'
 import TimelineCard from './TimelineCard';
 
-import { sonyData } from '../../data/sonyData'
-import { sonyTimeline } from '../../data/sonyTimeline'
+import { cdcData } from '../../data/sonyData'
+import { cdcTimeline } from '../../data/sonyTimeline'
 
 import libraryWalk from '../../assets/png/education/libraryWalk.jpg'
 

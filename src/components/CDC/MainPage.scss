@@ -1,0 +1,138 @@
+/* MainPage.scss */
+.what-is {
+    padding: 50px;
+    text-align: center;
+    
+    h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: var(--secondary-color);
+      font-size: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+  
+  .timeline {
+    padding: 50px;
+    text-align: center;
+    
+    h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .timeline-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .timeline-card {
+      background-color: var(--tertiary-color);
+      border-radius: 8px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+      h4 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+      }
+      
+      p {
+        color: var(--secondary-color);
+        font-size: 1rem;
+      }
+      
+      span {
+        font-size: 0.9rem;
+        color: var(--tertiary80-color);
+      }
+      
+      img {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  .skills {
+    padding: 50px;
+    text-align: center;
+    
+    h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      
+      li {
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        margin: 10px 0;
+      }
+    }
+  }
+  
+  .media {
+    padding: 50px;
+    text-align: center;
+    
+    h2 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .media-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      
+      img {
+        width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .about-img {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images */
+    gap: 20px; /* Space between images */
+    margin-top: 20px;
+
+    img {
+        width: 30vw; /* Responsive width */
+        max-width: 300px; /* Ensure it doesn’t stretch too much */
+        height: auto;
+    }
+
+    .gdit-logo {
+        filter: brightness(150%); /* Increase brightness by 5% */
+    }
+}

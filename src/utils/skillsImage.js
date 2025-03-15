@@ -80,6 +80,8 @@ import pandas from '../assets/png/skills/Pandas.png'
 import competitive from '../assets/png/skills/Competitive.png'
 import mindmap from '../assets/png/skills/mindMapping.png'
 import prototyping from '../assets/png/skills/Prototyping.png'
+import customerjourney from '../assets/png/skills/CustomerJourneyMap.png'
+import servicenow from '../assets/png/skills/Servicenow.png'
 {/* ^^Icons I've Added^^ */}
 
 
@@ -246,6 +248,10 @@ export const skillsImage = (skill) => {
             return competitive;
         case 'prototyping':
             return prototyping;
+        case 'customer journey mapping':
+            return customerjourney;
+        case 'servicenow':
+            return servicenow;
         default:
             break;
     }

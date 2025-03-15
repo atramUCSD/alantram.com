@@ -1,41 +1,40 @@
-import React,{ useContext } from 'react';
+import React, { useContext } from 'react';
 import Marquee from "react-fast-marquee";
 
-import '../Skills/Skills.css'
+import '../Skills/Skills.css';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { sonyskillsData } from '../../data/sonyskillsData'
-import { skillsImage } from '../../utils/skillsImage'
+import { cdcSkillsData } from '../../data/cdcSkillsData';
+import { skillsImage } from '../../utils/skillsImage';
 
-function SonySkills() {
-
+function CdcSkills() {
     const { theme } = useContext(ThemeContext);
 
     const skillBoxStyle = {
         backgroundColor: theme.secondary,
         boxShadow: `0px 0px 30px ${theme.primary30}`
-    }
+    };
 
     return (
-        <div className="skills" style={{backgroundColor: theme.secondary}}>
+        <div className="skills" style={{ backgroundColor: theme.secondary }}>
             <div className="skillsHeader">
-                <h2 style={{color: theme.primary}}>Skills Used</h2>
+                <h2 style={{ color: theme.primary }}>Skills Used</h2>
             </div>
             <div className="skillsContainer">
                 <div className="skill--scroll">
-                    <Marquee 
-                        gradient={false} 
-                        speed={100} 
+                    <Marquee
+                        gradient={false}
+                        speed={100}
                         pauseOnHover={true}
-                        pauseOnClick={true} 
+                        pauseOnClick={true}
                         delay={0}
-                        play={true} 
+                        play={true}
                         direction="left"
                     >
-                        {sonyskillsData.map((skill, id) => (
+                        {cdcSkillsData.map((skill, id) => (
                             <div className="skill--box" key={id} style={skillBoxStyle}>
                                 <img src={skillsImage(skill)} alt={skill} />
-                                <h3 style={{color: theme.tertiary}}>
+                                <h3 style={{ color: theme.tertiary }}>
                                     {skill}
                                 </h3>
                             </div>
@@ -44,7 +43,7 @@ function SonySkills() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default SonySkills
+export default CdcSkills;
