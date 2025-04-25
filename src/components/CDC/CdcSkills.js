@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import Marquee from "react-fast-marquee";
 
-import '../Skills/Skills.css';
+import './MainPage.scss';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { cdcSkillsData } from '../../data/cdcSkillsData';
+import { cdcSkillsData } from '../../data/cdcskillsData';
 import { skillsImage } from '../../utils/skillsImage';
 
 function CdcSkills() {
@@ -16,10 +16,7 @@ function CdcSkills() {
     };
 
     return (
-        <div className="skills" style={{ backgroundColor: theme.secondary }}>
-            <div className="skillsHeader">
-                <h2 style={{ color: theme.primary }}>Skills Used</h2>
-            </div>
+        <div className="skills" style={{ backgroundColor: theme.secondary}}>
             <div className="skillsContainer">
                 <div className="skill--scroll">
                     <Marquee

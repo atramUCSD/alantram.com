@@ -1,6 +1,8 @@
  export const cdcSkillsData = [
     'Photoshop',
     'Figma',
+    'Adobe XD',
+    'Illustrator',
     'Customer Journey Mapping',
     'Competitive Analysis',
     'Prototyping',

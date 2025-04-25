@@ -7,14 +7,12 @@ export const cdcTimeline = [
     {
         id: 1,
         title: 'Project Phase 1', // Placeholder for the project phase or title
-        week: 'Week 1', // Placeholder for the week number or timeframe
         description: 'Placeholder description for Week 1.', // Placeholder for the description of the phase
         img: '/path/to/img1.png', // Placeholder for the image path
     },
     {
         id: 2,
         title: 'Project Phase 2', // Repeat for other phases or weeks
-        week: 'Week 2',
         description: 'Placeholder description for Week 2.',
         img: '/path/to/img2.png',
     },

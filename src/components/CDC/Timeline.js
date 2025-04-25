@@ -3,11 +3,11 @@ import GanttChart from '../../assets/png/sony/GanttChart.png';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 
-import './Timeline.scss'
+import './MainPage.scss'
 import TimelineCard from './TimelineCard';
 
-import { cdcData } from '../../data/sonyData'
-import { cdcTimeline } from '../../data/sonyTimeline'
+import { cdcData } from '../../data/cdcData'
+import { cdcTimeline } from '../../data/cdcTimeline'
 
 import libraryWalk from '../../assets/png/education/libraryWalk.jpg'
 
@@ -32,7 +32,7 @@ function Timeline() {
                     ))}
                 </div>
                 <div className="timeline-iframe">
-                <img src={GanttChart} alt="Gantt Chart" />
+                <img className="CdcImage" src={GanttChart} alt="Gantt Chart" />
                 {/* iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTqC0no0Zq1vkazFNwhzn5cFxx0RvceyjPzCRtxl3-Gdo6mRqh1Ymbi2Owa0Z2WOETODLZJPMv2UEnF/pubhtml?widget=true&amp;headers=false"></iframe> /*}
                     {/* <img src={theme.eduimg} alt=""/> */}
                     {/* <img src={libraryWalk} alt=""/> */}

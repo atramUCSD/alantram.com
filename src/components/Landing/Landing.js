@@ -125,13 +125,13 @@ function Landing() {
                         <div className='lcr-buttonContainer' style={{justifyContent: "space-between"}}>
                             {headerData.resumePdf && (
                                 <a
-                                    href={"https://drive.google.com/file/d/1U3BOpNc1C_ZRh7z0ADNk4Fr8wyq3lj6X/view?usp=sharing"}
+                                    href={"https://www.gdit.com/industries/health/publichealth/"}
                                     download='resume'
                                     target='_blank'
                                     rel='noreferrer'
                                 >
                                     <Button className={classes.resumeBtn} style={{marginTop: '2vw', marginRight:'.5rem'}}>
-                                       Graphic Resume
+                                    My Work at GDIT
                                     </Button>
                                 </a>
                             )}
@@ -142,7 +142,7 @@ function Landing() {
                                     rel='noreferrer'
                                 >
                                     <Button className={classes.resumeBtn} style={{marginTop: '2vw', marginRight:'.5rem'}}>
-                                       Text-Based Resume
+                                       Resume
                                     </Button>
                                 </a>
                             )}
