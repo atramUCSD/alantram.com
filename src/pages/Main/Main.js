@@ -13,10 +13,10 @@ function Main() {
             <Navbar />        
             <Landing />
             <About />
+            <Projects />
             <Education />
             <Skills />
             <Experience />
-            <Projects />
             {/* 
                 <Achievement />
                 <Services />

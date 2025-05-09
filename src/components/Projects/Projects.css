@@ -5,7 +5,8 @@
     justify-content: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
-    padding: 2rem;
+    padding-top: 0rem;
+    padding-bottom:3rem;
 }
 
 

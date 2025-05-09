@@ -4,24 +4,44 @@ import three from '../assets/png/sony/Sony-logo.png';
 import four from '../assets/svg/Restaurant-Thumbnail.svg';
 import five from '../assets/svg/projects/five.svg'
 import six from '../assets/svg/projects/six.svg'
+import seven from '../assets/png/cdc/CDC-Logo-Text-2024.png'
 
 // ... (other imports)
 
-const projectImages = [one, two, three, four, five, six];
+const projectImages = [one, two, three, four, five, six, seven];
 
 export const projectsData = [
     {
         id: 1,
+        projectName: 'GDIT x CDC Case Study',
+        projectDesc: 'Solving IT Challenges with Human-Centered Design. Focused on Customer Success Journey Mapping, Rapid Prototyping, and User Testing.',
+        // ... (other properties)
+        image: projectImages[6],
+        code: 'null',
+        demo: '#/cdc',
+        casestudy: '#/cdc'
+    },
+    {
+        id: 2,
+        projectName: 'Sony Pathways Program',
+        projectDesc: "I worked with a team of 3 other students to mock a prototype for a new TV remote that would be seen by Sony employees.",
+        // ... (other properties)
+        image: projectImages[2],
+        demo: 'https://docs.google.com/presentation/d/1UUlGkBNYeRQN5X7cGvU7_KteP1yDBg9G/edit?usp=sharing&ouid=113733715422948884241&rtpof=true&sd=true',
+        casestudy: '/Sony'
+    },
+    {
+        id: 3,
         projectName: 'CAPS Redesign | Old Casestudy version',
         projectDesc: 'I sought to redesign the CAPS website to make it more user friendly and accessible. My first attempt at a full-scale test of my skillset',
         // ... (other properties)
         image: projectImages[0],
         code: 'https://github.com/atramUCSD/Caps-Redesign',
-        demo: 'https://ucsdcloud-my.sharepoint.com/:p:/r/personal/atram_ucsd_edu/Documents/CAPS%20Redesign.pptx?d=w108b2bccc1b644dc800ed90305819830&csf=1&web=1&e=XGdJxA&nav=eyJzSWQiOjI4NywiY0lkIjowfQ',
+        demo: 'https://docs.google.com/presentation/d/1Pxw35BA8hgsbZuPrbPVsjZN-BLxXD1hJ1nwutYTi9x4/edit?usp=sharing',
         casestudy: 'https://atramucsd.github.io/My-Website/#/CAPS_Redesign'
     },
     {
-        id: 2,
+        id: 4,
         projectName: 'ReCODE Health | Old Casestudy version',
         projectDesc: 'First project within a research organization, involving mockups, user testing, and my first React scripting experience.',
         // ... (other properties)
@@ -31,18 +51,7 @@ export const projectsData = [
         casestudy: 'https://atramucsd.github.io/My-Website/#/ReCODE'
     },
     {
-        id: 3,
-        projectName: 'Sony Pathways Program',
-        projectDesc: "I worked with a team of 3 other students to mock a prototype for a new TV remote that would be seen by Sony employees.",
-        // ... (other properties)
-        image: projectImages[2],
-        demo: 'https://docs.google.com/presentation/d/1UUlGkBNYeRQN5X7cGvU7_KteP1yDBg9G/edit?usp=sharing&ouid=113733715422948884241&rtpof=true&sd=true',
-        casestudy: '/Sony'
-    },
-   
-
-    {
-        id: 4,
+        id: 5,
         projectName: 'Restaurant Website Redesign | Casestudy under development',
         projectDesc: 'I created a website for my family restaurant using React, multiple CSS libraries, Photoshop, and Figma.',
         tags: ['Flutter', 'Firebase'],
@@ -52,22 +61,13 @@ export const projectsData = [
         image: four
     },
     {
-        id: 5,
+        id: 6,
         projectName: 'Published User Experience Research Paper',
         projectDesc: 'Conducted human-centered design workshops with students to better understand their experiences, concerns, and generate ideas for digital solutions to support their social challenges during and beyond COVID-19.',
         code: null,
         demo: 'https://docs.google.com/document/d/1H8_BKo_SUy3bjAfmMlR8n_rVwMgPK_KN/edit?usp=sharing&ouid=110861846231668704638&rtpof=true&sd=true',
         casestudy: null,
         image: five
-    },
-    {
-        id: 6,
-        projectName: 'Prototypes and Mockups Showcase', 
-        projectDesc: 'Created an organized Figma file for those interested in my past designs to have easy access.',
-        code: null,
-        demo: 'https://www.figma.com/file/cLyssAmkw2YmjiFj3YOxPz/Project-Showcase?node-id=0%3A1',
-        casestudy: null,
-        image: six
     },
     /* 
     {

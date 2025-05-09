@@ -7,74 +7,37 @@ import GanttChart from '../../assets/png/sony/GanttChart.png';
 import CdsmModel from '../../assets/png/cdc/CDSM-Model.png';
 import EcProRoles from '../../assets/png/cdc/ecpro-roles-workflow.png';
 import OriginalDesign from '../../assets/png/cdc/OriginalDesign.png';
-import Familiarity from '../../assets/png/cdc/Familiarity.jpeg'
+import Familiarity from '../../assets/png/cdc/Familiarity.jpeg';
+import DigitalWorkflows from '../../assets/png/cdc/DigitalWorkflows.png';
+import FeedbackAnalytics from '../../assets/png/cdc/fdbck-analytics-response.png';
 
 import Persona1 from '../../assets/png/cdc/Non-Technical-Customer.png';
 import Persona2 from '../../assets/png/cdc/Technical-Customer.png';
 
-import TimelineCard from './TimelineCard';
+import DeliveryCadence from '../../assets/png/cdc/Delivery-Meeting-Cadence.png'
+import ImplementationSchedule from '../../assets/png/cdc/Implementation Schedule.png'
+import DataDrivenCX from '../../assets/png/cdc/Data Driven Approach - CX.png'
+import EmbeddedSurvey from '../../assets/png/cdc/Embedded-Survey.png'
+import GartnerSurvey from '../../assets/png/cdc/GartnerSurvey.png'
+import FocusGroup from '../../assets/png/cdc/FocusGroup.png'
+
+import CdcTimeline from './CdcTimeline'; // adjust path as needed
+import CdcTimelineCard from './CdcTimelineCard';
 import CdcSkills from './CdcSkills'; // Import CdcSkills
 import { BorderTopRounded } from '@material-ui/icons';
-
-// Define cdcTimeline with imported images
-const cdcTimeline = [
-  {
-    id: 1,
-    title: "Project Kickoff and Broad Research into Core User Group Data",
-    description: " ",
-    week: "Part 1",
-    img: CdcLogoText,
-  },
-  {
-    id: 2,
-    title: "Design System and Branding Guidelines",
-    description: " ",
-    week: "Part 2",
-    img: CdcLogoText,
-  },
-  {
-    id: 3,
-    title: "Timeline Trajectories, Customer Expectations, and User Testing.",
-    description: " ",
-    week: "Part 3",
-    img: CdcLogoText,
-  },
-  {
-    id: 4,
-    title: "Low/High Fidelity Mockups and Interactive Prototypes",
-    description: " ",
-    week: "Part 4",
-    img: CdcLogoText,
-  },
-  {
-    id: 5,
-    title: "Usability Testing, Design Iteration, and Stakeholder Reviews",
-    description: " ",
-    week: "Part 5",
-    img: CdcLogoText,
-  },
-  {
-    id: 6,
-    title: "Design to Developer Handoffs. Ensuring WCAG and Accessibility Compliance.",
-    description: " ",
-    week: "Part 6",
-    img: CdcLogoText,
-  },
-  {
-    id: 7,
-    title: "Post-Launch Evaluation, Continuous Improvements, and User Feedback Loop",
-    description: " ",
-    week: "Part 7",
-    img: CdcLogoText,
-  },
-  
-];
 
 const stepImages = [
   Familiarity, // Step 1
   OriginalDesign, // Step 2
-  EcProRoles, // Step 3
-  EcProRoles, // Step 4
+  FeedbackAnalytics, // Step 3
+  DigitalWorkflows, // Step 4
+];
+
+const stepImages2 = [
+  ImplementationSchedule, // Step 1
+  GartnerSurvey, // Step 2
+  FocusGroup, // Step 3
+  DataDrivenCX, // Step 4
 ];
 
 function MainPage() {
@@ -272,46 +235,143 @@ function MainPage() {
     </div>
 </div>
 
+<CdcTimeline />
 
+{/* User Research */}
+  <div className="about" id="about" style={{ backgroundColor: theme.secondary }}>
+  <div className="journey-body" style={{ textAlign: "center" }}>
+    <div className="about-description" style={{ backgroundColor: theme.secondary }}>
+      <h2 style={{ color: theme.primary, textAlign: "right", fontSize: "32px" }}>User Experience Insights: From Research to Optimization</h2>
+      <p style={{ color: theme.tertiary80 }}>
+        Our user research journey includes critical stages such as Surveys, Testing, and Data Analytics to continuously improve the user experience across the CDC platform.
+      </p>
+    </div>
 
-
-
-
-      {/* Timeline Section */}
-      <div className="education" id="resume" style={{ backgroundColor: theme.secondary }}>
-        <div className="education-body">
-          <div className="education-description">
-            <h1 style={{ color: theme.primary, fontSize:'32px' }}>Timeline</h1>
-            <div className="timeline-section">
-              {cdcTimeline.map((item) => (
-                <div key={item.id} className="timeline-card">
-                  <TimelineCard
-                    id={item.id}
-                    title={item.title}
-                    description={item.description}
-                    week={item.week}
-                    img={item.img}
-                  />
-                </div>
-              ))}
-            </div>
+    {/* Journey Steps */}
+    <div className="journey-steps">
+      {[1, 2, 3, 4].map((step, idx) => (
+        <div
+          key={step}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            flexWrap: "wrap",
+            marginBottom: "40px",
+          }}
+        >
+          {/* LEFT IMAGE */}
+          <div
+            style={{
+              flex: "1 1 60%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              paddingRight: "20px",
+              width: "40vw",
+              height: "100%",
+            }}
+          >
+            <img
+              src={stepImages2[idx]}
+              alt={`Step ${step}`}
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
           </div>
-          <div className="timeline-iframe">
-            <img id="CdcImage" src={CdsmModel} style={{ borderStyle: 'solid', borderRadius: '15px' }} />
-            <img id="CdcImage" src={CdsmModel} style={{ borderStyle: 'solid', borderRadius: '15px' }} />
-            <img id="CdcImage" src={CdsmModel} style={{ borderStyle: 'solid', borderRadius: '15px' }} />
-            <img id="CdcImage" src={CdsmModel} style={{ borderStyle: 'solid', borderRadius: '15px' }} />
+
+          {/* RIGHT TEXT */}
+          <div className="journey-step" style={{ flex: "1 1 40%" }}>
+            {step === 1 && (
+              <>
+                <h3>Step 1: Building </h3>
+                <div className="journey-step-detail">
+                  <h4>1.1: Know the Mission and the Needs Of Your Users</h4>
+                  <p style={{ color: theme.tertiary80 }}>
+                    Before doing anything, I ensure that I fully understand what I was brought on to do. Understanding the goals of my myself, my team, my customers, and any who could potentially
+                    interact with the product.
+                  </p>
+                </div>
+                <div className="journey-step-detail">
+                  <h4>1.2: Learn All You Can From What's Existed and Build On It </h4>
+                  <p style={{ color: theme.tertiary80 }}>
+                  Design as a concept builds on the success and failures of past trials. Going into this project, I reached out to any key personnel and accessed content
+                  to build a foundtation that'll iterate on the identity the stakeholders have envisioned. 
+                  </p>
+                </div>
+              </>
+            )}
+
+            {step === 2 && (
+              <>
+                <h3>Step 2: User Metrics, Data Collection Means, and Utilizing ServiceNow Capabilities</h3>
+                <div className="journey-step-detail">
+                  <h4>2.1: Engaging with Users for Insights</h4>
+                  <p style={{ color: theme.tertiary80 }}>
+                    Equipped with ServiceNow, we looked to create survey opportunities within our web applications that will both be seamlessly integrated into the user experience
+                    and further our means of understanding user needs.
+                  </p>
+                </div>
+                <div className="journey-step-detail">
+                  <h4>2.2: User Behavior Analytics</h4>
+                  <p style={{ color: theme.tertiary80 }}>
+                  Going beyond surveys, with implementation of Employee Center, we've systematically stood up User Behavior Analytics
+                  that'll allow for data collection of time spent on an item, clicking zones, frequency of content visit, etc.
+                  </p>
+                </div>
+                <div className="journey-step-detail">
+                  <h4>2.3: Analyzing Survey Responses</h4>
+                  <p style={{ color: theme.tertiary80 }}>
+                    Through routine meetings with key personnel and owners; reviewed response trends, segmented user groups, and identified recurring feedback themes to inform design changes.
+                  </p>
+                </div>
+              </>
+            )}
+
+            {step === 3 && (
+              <>
+                <h3>Step 3: User Testing</h3>
+                <div className="journey-step-detail">
+                  <h4>3.1: Usability Test Planning</h4>
+                  <p style={{ color: theme.tertiary80 }}>
+                    Define tasks, scenarios, and success metrics for each usability session to test critical workflows.
+                  </p>
+                </div>
+                <div className="journey-step-detail">
+                  <h4>3.2: Capturing User Behavior</h4>
+                  <p style={{ color: theme.tertiary80 }}>
+                    Observe how users interact with prototypes or live systems to uncover confusion, friction, or satisfaction.
+                  </p>
+                </div>
+              </>
+            )}
+
+            {step === 4 && (
+              <>
+                <h3>Step 4: Metrics and Optimization</h3>
+                <div className="journey-step-detail">
+                  <p style={{ color: theme.tertiary80 }}>
+                    Use analytics, KPIs, and success tracking to evaluate design impact, refine experiences, and drive continuous improvement.
+                  </p>
+                </div>
+              </>
+            )}
           </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* Expertise in Action Section */}
       <div className="about-description" style={{ backgroundColor: theme.secondary, padding: "2rem"}}>
         <h1 style={{ alignSelf:'center',color: theme.primary, fontFamily: 'Poppins, sans-serif'}}>Expertise in Action</h1>
       </div>
       <CdcSkills /> {/* Add this component wherever it makes sense in the layout */}
+      
     </div>
   );
 }
+
+
 
 export default MainPage;

@@ -33,7 +33,7 @@ export const experienceData = [
     {
         id: 5,
         company: 'General Dynamics Information Technology (GDIT)',
-        jobtitle:'UI/UX & Web Dveloper Senior',
+        jobtitle:'UI/UX & Web Developer Senior',
         startYear: '2023',
         endYear: 'Present',
 

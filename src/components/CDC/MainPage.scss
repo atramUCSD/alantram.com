@@ -30,14 +30,14 @@
     margin-bottom: 1rem;
   }
   
-  .timeline-cards {
+  .cdc-timeline-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }
   
-  .timeline-card {
+  .cdc-timeline-card {
     background-color: var(--tertiary-color);
     border-radius: 8px;
     padding: 20px;
@@ -199,11 +199,11 @@ footer {
 }
 
 /* Section: Education */
-.education {
+.cdc-education {
   min-height: 100vh;
 }
 
-.education-body {
+.cdc-education-body {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -212,7 +212,7 @@ footer {
   color: hsla(117, 56%, 49%, 0.702);
 }
 
-.education-description {
+.cdc-education-description {
   width: 100%;
   flex: 0.65;
   padding: 2rem;
@@ -221,20 +221,21 @@ footer {
   align-items: flex-start;
   justify-content: center;
   margin-left: 7%;
+
+  h1 {
+    font-size: 3.5rem;
+    font-family: var(--primaryFont);
+    margin-bottom: 2rem;
+  }
 }
 
-.education-description > h1 {
-  font-size: 3.5rem;
-  font-family: var(--primaryFont);
-  margin-bottom: 2rem;
-}
-
-.education-card {
+.cdc-education-card {
+  background-color: green;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 100%;
+  width: 90%;
   height: 140px;
   padding: 1.5rem;
   border-radius: 20px;
@@ -242,7 +243,7 @@ footer {
   transition: background-color 200ms ease-in-out;
 }
 
-.educard-img {
+.cdc-educard-img {
   border-radius: 50%;
   width: 55px;
   height: 55px;
@@ -250,33 +251,33 @@ footer {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+
+  img {
+    width: 40px;
+  }
 }
 
-.educard-img > img {
-  width: 40px;
-}
-
-.education-details {
+.cdc-education-details {
   margin-left: 0.6rem;
-}
 
-.education-details > h6 {
-  font-family: var(--primaryFont);
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
+  h6 {
+    font-family: var(--primaryFont);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
 
-.education-details > h4 {
-  font-family: var(--primaryFont);
-  font-size: 1.225rem;
-  font-weight: 600;
-}
+  h4 {
+    font-family: var(--primaryFont);
+    font-size: 1.225rem;
+    font-weight: 600;
+  }
 
-.education-details > h5 {
-  font-family: var(--primaryFont);
-  font-size: 0.9rem;
-  font-weight: 600;
+  h5 {
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
 }
 
 .timeline-iframe {
@@ -286,107 +287,146 @@ footer {
   margin-top: 1rem;
 
   iframe {
-      display: block;
-      height: 50rem;
-      margin: auto;
-      width: 90%;
-
-      @media only screen and (min-width: 768px) and (max-width: 1023px) {
-          display: none;
-      }
-
-      @media only screen and (min-width: 480px) and (max-width: 767px) {
-          display: none;
-      }
-
-      @media only screen and (min-width: 0px) and (max-width: 479px) {
-          display: none;
-      }
+    display: block;
+    height: 50rem;
+    margin: auto;
+    width: 100%;
   }
 }
 
-.education-image > img {
+.cdc-education-image img {
   width: 100%;
   border-radius: 3rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .education {
-      min-height: 100%;
-  }
+/* ===== Responsive Styles ===== */
 
-  .education-image {
-      display: none;
+/* Hide iframe on small and medium screens */
+@media (max-width: 1024px) {
+  .timeline-iframe iframe {
+    display: none;
   }
+  .cdc-education-details {
+    h6 {
+      font-size: 0.85rem;
+      margin-bottom: 0.45rem;
+    }
 
-  .education-description {
-      flex: 1;
-      margin: auto;
-  }
+    h4 {
+      font-size: 1rem;
+      line-height: 126%;
+    }
 
-  .education-description > h1 {
-      font-size: 3.2rem;
-  }
-
-  .education-card {
-      width: 100%;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+    h5 {
+      font-size: 0.7rem;
+      line-height: 126%;
+    }
   }
 }
 
+/* Tablet breakpoint (992px and down) */
+@media (max-width: 992px) {
+  .cdc-education {
+    min-height: 100%;
+  }
+
+  .cdc-education-image {
+    display: none;
+  }
+
+  .cdc-education-description {
+    flex: 1;
+    margin: auto;
+
+    h1 {
+      font-size: 3.2rem;
+    }
+  }
+
+  .cdc-education-card {
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Mobile breakpoint (800px and down) */
 @media (max-width: 800px) {
-  .education-description > h1 {
+  .cdc-education-description {
+    padding: 1rem;
+
+    h1 {
       font-size: 3rem;
       margin-bottom: 2rem;
       align-self: center;
+    }
   }
 
-  .education-description {
-      padding: 1rem;
+  .cdc-education-card {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    height: 150px;
+    width: 80vw;
   }
 
-  .education-card {
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      height: 150px;
-      width: 80vw;
-  }
+  .cdc-educard-img {
+    width: 45px;
+    height: 45px;
 
-  .educard-img {
-      width: 45px;
-      height: 45px;
-  }
-
-  .educard-img > img {
+    img {
       width: 30px;
+    }
   }
 
-  .education-details > h6 {
+  .cdc-education-details {
+    h6 {
       font-size: 0.85rem;
       margin-bottom: 0.45rem;
-  }
+    }
 
-  .education-details > h4 {
+    h4 {
       font-size: 1rem;
       line-height: 126%;
-  }
+    }
 
-  .education-details > h5 {
+    h5 {
       font-size: 0.7rem;
       line-height: 126%;
+    }
   }
 }
 
+/* Small mobile screens (600px and down) */
 @media (max-width: 600px) {
-  .education-description > h1 {
-      font-size: 2.5rem;
+  .cdc-education-description h1 {
+    font-size: 2.5rem;
   }
 }
+
 
 #CdcImage {
-  width: 50vw;
+  width: 50rem;
+}
+
+@media (max-width: 1400px) and (min-width: 1369px) {
+  #CdcImage {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 1369px) and (min-width: 1024px) {
+  #CdcImage {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 1164px) {
+  #CdcImage {
+    display: none;
+  }
+  .cdc-education-card{
+    width:100%;
+  }
 }
 
 .timeline-iframe #CdcImage {
@@ -461,7 +501,7 @@ footer {
   margin-bottom: 2rem;
   border-radius: 15px;
   width: 100%;
-  max-width: 600px;
+  max-width: 900px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
