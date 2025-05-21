@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/alantram.com/static/css/main.645e73e2.chunk.css",
-    "main.js": "/alantram.com/static/js/main.d37cec0b.chunk.js",
-    "main.js.map": "/alantram.com/static/js/main.d37cec0b.chunk.js.map",
+    "main.css": "/alantram.com/static/css/main.2cd43cd1.chunk.css",
+    "main.js": "/alantram.com/static/js/main.0879a9e9.chunk.js",
+    "main.js.map": "/alantram.com/static/js/main.0879a9e9.chunk.js.map",
     "runtime-main.js": "/alantram.com/static/js/runtime-main.0186ab98.js",
     "runtime-main.js.map": "/alantram.com/static/js/runtime-main.0186ab98.js.map",
     "static/css/2.98c9c260.chunk.css": "/alantram.com/static/css/2.98c9c260.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.3cd6aa4a.chunk.js.map": "/alantram.com/static/js/3.3cd6aa4a.chunk.js.map",
     "index.html": "/alantram.com/index.html",
     "static/css/2.98c9c260.chunk.css.map": "/alantram.com/static/css/2.98c9c260.chunk.css.map",
-    "static/css/main.645e73e2.chunk.css.map": "/alantram.com/static/css/main.645e73e2.chunk.css.map",
+    "static/css/main.2cd43cd1.chunk.css.map": "/alantram.com/static/css/main.2cd43cd1.chunk.css.map",
     "static/js/2.52eca67b.chunk.js.LICENSE.txt": "/alantram.com/static/js/2.52eca67b.chunk.js.LICENSE.txt",
     "static/media/Accessibility.67a9c138.svg": "/alantram.com/static/media/Accessibility.67a9c138.svg",
     "static/media/index.css": "/alantram.com/static/media/BestermindRegular.e58a1922.ttf",
@@ -22,11 +22,12 @@
     "static/media/CDSM-Model.678f655a.png": "/alantram.com/static/media/CDSM-Model.678f655a.png",
     "static/media/Competitive.83d96e45.png": "/alantram.com/static/media/Competitive.83d96e45.png",
     "static/media/CustomerJourneyMap.5b2de518.png": "/alantram.com/static/media/CustomerJourneyMap.5b2de518.png",
-    "static/media/Data Driven Approach - CX.97ff8e53.png": "/alantram.com/static/media/Data Driven Approach - CX.97ff8e53.png",
+    "static/media/Data Driven Approach - CX.305787bb.png": "/alantram.com/static/media/Data Driven Approach - CX.305787bb.png",
     "static/media/Delivery-Meeting-Cadence.bb57a5a2.png": "/alantram.com/static/media/Delivery-Meeting-Cadence.bb57a5a2.png",
     "static/media/Design-Changes.76f5e823.svg": "/alantram.com/static/media/Design-Changes.76f5e823.svg",
     "static/media/Design-Constraints.80fb7286.svg": "/alantram.com/static/media/Design-Constraints.80fb7286.svg",
     "static/media/DigitalWorkflows.d33082a5.png": "/alantram.com/static/media/DigitalWorkflows.d33082a5.png",
+    "static/media/ECPROV5.e1148294.png": "/alantram.com/static/media/ECPROV5.e1148294.png",
     "static/media/Embedded-Survey.af382785.png": "/alantram.com/static/media/Embedded-Survey.af382785.png",
     "static/media/Familiarity.460ef61b.jpeg": "/alantram.com/static/media/Familiarity.460ef61b.jpeg",
     "static/media/CapsMedia.scss": "/alantram.com/static/media/Presentation.7bd20848.png",
@@ -35,7 +36,7 @@
     "static/media/GanttChart.2873d207.png": "/alantram.com/static/media/GanttChart.2873d207.png",
     "static/media/GartnerSurvey.d5b76d34.png": "/alantram.com/static/media/GartnerSurvey.d5b76d34.png",
     "static/media/Graduation.76098f3a.png": "/alantram.com/static/media/Graduation.76098f3a.png",
-    "static/media/Implementation Schedule.246e1d80.png": "/alantram.com/static/media/Implementation Schedule.246e1d80.png",
+    "static/media/Implementation Schedule.f2b9de06.png": "/alantram.com/static/media/Implementation Schedule.f2b9de06.png",
     "static/media/Non-Technical-Customer.b961188d.png": "/alantram.com/static/media/Non-Technical-Customer.b961188d.png",
     "static/media/OriginalDesign.d4389df4.png": "/alantram.com/static/media/OriginalDesign.d4389df4.png",
     "static/media/Presentation.bef37a86.svg": "/alantram.com/static/media/Presentation.bef37a86.svg",
@@ -202,7 +203,7 @@
     "static/js/runtime-main.0186ab98.js",
     "static/css/2.98c9c260.chunk.css",
     "static/js/2.52eca67b.chunk.js",
-    "static/css/main.645e73e2.chunk.css",
-    "static/js/main.d37cec0b.chunk.js"
+    "static/css/main.2cd43cd1.chunk.css",
+    "static/js/main.0879a9e9.chunk.js"
   ]
 }
