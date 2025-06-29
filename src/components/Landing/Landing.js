@@ -125,7 +125,7 @@ function Landing() {
                         <div className='lcr-buttonContainer' style={{justifyContent: "space-between"}}>
                             {headerData.resumePdf && (
                                 <a
-                                    href={"https://www.gdit.com/industries/health/publichealth/"}
+                                    href={"https://www.gdit.com/about-gdit/our-partners/strategic-partners/servicenow/"}
                                     download='resume'
                                     target='_blank'
                                     rel='noreferrer'

@@ -26,6 +26,12 @@ import CdcTimelineCard from './CdcTimelineCard';
 import CdcSkills from './CdcSkills'; // Import CdcSkills
 import { BorderTopRounded } from '@material-ui/icons';
 
+import KareemV2 from '../../assets/png/cdc/Kareem-V2.png';
+import KareemV3 from '../../assets/png/cdc/Kareem-V3.png';
+import ServiceDesk2023 from '../../assets/png/cdc/ServiceDesk-2023-2024.png';
+import ECProDraft2024 from '../../assets/png/cdc/ECPro-Draft-2024.png';
+import ECProV5GoLive from '../../assets/png/cdc/ECProV5-GoLive.png';
+
 const stepImages = [
   Familiarity, // Step 1
   OriginalDesign, // Step 2
@@ -38,6 +44,15 @@ const stepImages2 = [
   GartnerSurvey, // Step 2
   FocusGroup, // Step 3
   DataDrivenCX, // Step 4
+];
+
+const stepImages3 = [
+  OriginalDesign, // Step 1
+  KareemV2, // Step 2
+  KareemV3, // Step 3
+  ServiceDesk2023, // Step 4
+  ECProDraft2024, // Step 5
+  ECProV5GoLive // Step 6
 ];
 
 function MainPage() {
@@ -226,7 +241,7 @@ function MainPage() {
                         )}
                     </div>
                     {/* RIGHT IMAGE */}
-                    <div style={{ flex: "1 1 60%", display: "flex", justifyContent: "center", alignItems: "center", paddingLeft: "20px", width: '40vw',height: "100%" }}>
+                    <div style={{ flex: "1 1 50%", display: "flex", justifyContent: "center", alignItems: "center", paddingLeft: "20px", width: '40vw',height: "100%" }}>
                       <img src={stepImages[idx]} alt={`Step ${step}`} style={{ maxWidth: "100%", height: "auto" }} />
                     </div>
                   </div>
@@ -263,7 +278,7 @@ function MainPage() {
           {/* LEFT IMAGE */}
           <div
             style={{
-              flex: "1 1 60%",
+              flex: "1 1 50%",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -280,7 +295,7 @@ function MainPage() {
           </div>
 
           {/* RIGHT TEXT */}
-          <div className="journey-step" style={{ flex: "1 1 40%" }}>
+          <div className="journey-step" style={{ flex: "1 1 50%" }}>
             {step === 1 && (
               <>
                 <h3>Step 1: Building </h3>
@@ -350,7 +365,7 @@ function MainPage() {
                 <h3>Step 4: Metrics and Optimization</h3>
                 <div className="journey-step-detail">
                   <p style={{ color: theme.tertiary80 }}>
-                    Use analytics, KPIs, and success tracking to evaluate design impact, refine experiences, and drive continuous improvement.
+                    User metrics and success tracking to fuel data driven components such as Search, AI, Filters, and Workflows.
                   </p>
                 </div>
               </>
@@ -367,6 +382,144 @@ function MainPage() {
         <h1 style={{ alignSelf:'center',color: theme.primary, fontFamily: 'Poppins, sans-serif'}}>Expertise in Action</h1>
       </div>
       <CdcSkills /> {/* Add this component wherever it makes sense in the layout */}
+      {/* Evolution of Design Section */}
+<div className="about" id="about" style={{ backgroundColor: theme.secondary }}>
+    <div className="journey-body" style={{ textAlign: "center" }}>
+        <div className="about-description" style={{ backgroundColor: theme.secondary }}>
+            <h2 style={{ color: theme.primary, textAlign: "right", fontSize: "32px" }}>Journey Map</h2>
+            <p style={{ color: theme.tertiary80 }}>
+                The Journey Map is designed to visualize the customer experience and track critical touchpoints across various stages of interaction with the ServiceNow Platform.
+                This map highlights key challenges and opportunities that our team addresses to improve the overall user experience for the CDC's critical services.
+            </p>
+        </div>
+
+        {/* Journey Steps */}
+        <div className="journey-steps">
+
+            {/* TEMPLATE FOR EACH STEP */}
+            {[1, 2, 3, 4, 5, 6].map((step, idx) => (
+                <div key={step} style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", marginBottom: "40px" }}>
+                    
+                    {/* LEFT CONTENT: TEXT */}
+                    <div className="journey-step" style={{ flex: "1 1 50%" }}>
+                        {step === 1 && (
+                            <>
+                                <h3>Original Design and What I Was Tasked to Do</h3>
+                                <div className="journey-step-detail">
+                                    <h4>1.1: Journey to modernizing IT Services and Operations</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        The Portal Team was tasked to enhance the User Experience 
+                                    </p>
+                                </div>
+                                <div className="journey-step-detail">
+                                    <h4>1.2: User Control and Instant Familiarity</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        The aim is for users to instantly feel in control when loading into our platform, providing a sense of familiarity from the start.
+                                    </p>
+                                </div>
+                            </>
+                        )}
+
+                        {step === 2 && (
+                            <>
+                                <h3>Step 2: Exploring Problem Solving Options</h3>
+                                <div className="journey-step-detail">
+                                    <h4>2.1: Understanding User Needs</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        Users come to our platform to solve a problem, and understanding the diversity of problem-solving approaches is crucial.
+                                    </p>
+                                </div>
+                                <div className="journey-step-detail">
+                                    <h4>2.2: Exploring Modern Solutions</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        It's up to the Designer to ensure the platform explores and implements the latest and greatest solutions.
+                                    </p>
+                                </div>
+                                <div className="journey-step-detail">
+                                    <h4>2.3: Empowering Users with Self-Service Tools</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        Equipping users with self-service tools, spotlighting popular site routes, and empowering human agents to assist users instantly when necessary.
+                                    </p>
+                                </div>
+                                <div className="journey-step-detail">
+                                    <h4>2.4: Implementing AI for Better Experience</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        Replicating human conversation with NLP-powered search/chatbots ensures a more intuitive and seamless experience for users.
+                                    </p>
+                                </div>
+                                <div className="journey-step-detail">
+                                    <h4>2.5: Ensuring Agents Get the Job Done when Needed</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        Most of the time a user simply wants to talk to a Human. If a problem cannot be solved with the approaches above, an Agent solution
+                                        will be prompted to the user when all other tools cannot end their troubleshooting process. 
+                                    </p>
+                                </div>
+                            </>
+                        )}
+
+                        {step === 3 && (
+                            <>
+                                <h3>Step 3: Data Driven Improvements through Lean and Agile UX</h3>
+                                <div className="journey-step-detail">
+                                    <h4>3.1: Continuous Feedback Loops</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        We prioritize short iteration cycles with regular user feedback to guide design improvements. This lean approach helps identify pain points early and adapt quickly to user needs.
+                                    </p>
+                                </div>
+                                <div className="journey-step-detail">
+                                    <h4>3.2: Analytics-Informed Decisions</h4>
+                                    <p style={{ color: theme.tertiary80 }}>
+                                        Leveraging usage analytics, heatmaps, and behavior tracking enables the design team to make data-informed decisions. These insights are essential to evolving the platform in ways that improve usability and performance.
+                                    </p>
+                                </div>
+                            </>
+                        )}
+
+
+                        {step === 4 && (
+                            <>
+                                <h3>Step 4: Trust and Reliability</h3>
+                                <div className="journey-step-detail">
+                                    <p style={{ color: theme.tertiary80 }}>
+                                    Building trust with users means delivering reliable, secure, and transparent digital services. Our team emphasizes clear communication, accountability, and system dependability to ensure users feel confident in their interactions.
+                                    </p>
+                                </div>
+                            </>
+                        )}
+
+                        {step === 5 && (
+                            <>
+                                <h3>Step 5: Trust and Reliability</h3>
+                                <div className="journey-step-detail">
+                                    <p style={{ color: theme.tertiary80 }}>
+                                    Building trust with users means delivering reliable, secure, and transparent digital services. Our team emphasizes clear communication, accountability, and system dependability to ensure users feel confident in their interactions.
+                                    </p>
+                                </div>
+                            </>
+                        )}
+
+
+                         {step === 6 && (
+                            <>
+                                <h3>Step 6: Trust and Reliability</h3>
+                                <div className="journey-step-detail">
+                                    <p style={{ color: theme.tertiary80 }}>
+                                    Building trust with users means delivering reliable, secure, and transparent digital services. Our team emphasizes clear communication, accountability, and system dependability to ensure users feel confident in their interactions.
+                                    </p>
+                                </div>
+                            </>
+                        )}                       
+
+                    </div>
+                    {/* RIGHT IMAGE */}
+                    <div style={{ flex: "1 1 50%", display: "flex", justifyContent: "center", alignItems: "center", paddingLeft: "20px", width: '40vw',height: "100%" }}>
+                      <img src={stepImages3[idx]} alt={`Step ${step}`} style={{ maxWidth: "100%", height: "auto" }} />
+                    </div>
+                  </div>
+            ))}
+        </div>
+    </div>
+</div>
       
     </div>
   );

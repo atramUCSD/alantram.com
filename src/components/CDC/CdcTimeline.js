@@ -5,6 +5,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import './MainPage.scss';
 import CdcTimelineCard from './CdcTimelineCard';
 import { cdcTimeline } from '../../data/cdcTimeline';
+import ECProV5 from '../../assets/png/cdc/ECPROV5.png'
 
 function CdcTimeline() {
   const { theme } = useContext(ThemeContext);
@@ -30,7 +31,7 @@ function CdcTimeline() {
         </div>
         <div className="timeline-iframe">
             <img id="CdcImage" src={CdsmModel} style={{ borderStyle: 'solid', borderRadius: '15px' }} alt="Cdc Model" />
-            <img id="CdcImage" src={RailwayInforgraphic} style={{ borderStyle: 'solid', borderRadius: '15px' }} alt="Cdc Model" />
+            <img id="CdcImage" src={ECProV5} style={{ borderStyle: 'solid', borderRadius: '15px' }} alt="Cdc Model" />
         </div>
       </div>
     </div>
