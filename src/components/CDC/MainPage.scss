@@ -154,14 +154,14 @@ footer {
 .problem-img {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align the image to the left */
+  align-items: flex-end; /* Align the image to the left */
   margin-top: 20px;
-  margin-left: 0; /* Remove any left margin */
+  margin-left: 0px; /* Remove any left margin */
   flex: 0.5; /* Allow the image to take up 50% of the space */
 }
 
 .problem-img img {
-  width: 42vw; /* Image width, adjust as needed */
+  width: 48vw; /* Image width, adjust as needed */
   height: auto;
   border-style: solid;
   border-radius: 15px;
@@ -460,7 +460,7 @@ footer {
 
 .personas-img-row img {
   width: 100%;
-  max-width: 40vw;
+  max-width: 34vw;
   height: 100%;
   border: 2px solid #ccc;
   border-radius: 15px;
@@ -481,7 +481,7 @@ footer {
 
 .RolesOverview{
   width: 100%;
-  max-width: 90vw;
+  max-width: 82vw;
   display: block;
   align-items: center;
   justify-self: center;

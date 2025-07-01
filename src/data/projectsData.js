@@ -17,7 +17,7 @@ export const projectsData = [
         projectDesc: 'Solving IT Challenges with Human-Centered Design. Focused on Customer Success Journey Mapping, Rapid Prototyping, and User Testing.',
         // ... (other properties)
         image: projectImages[6],
-        code: 'null',
+        code: '#/cdc',
         demo: '#/cdc',
         casestudy: '#/cdc'
     },

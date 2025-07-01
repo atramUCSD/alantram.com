@@ -5,7 +5,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import './MainPage.scss';
 import CdcTimelineCard from './CdcTimelineCard';
 import { cdcTimeline } from '../../data/cdcTimeline';
-import ECProV5 from '../../assets/png/cdc/ECPROV5.png'
+import ECProV5 from '../../assets/png/cdc/ECProV5-GoLive.png';
 
 function CdcTimeline() {
   const { theme } = useContext(ThemeContext);

@@ -7,11 +7,6 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import eduImgWhite from '../../assets/svg/education/eduImgWhite.svg';
 import eduImgBlack from '../../assets/svg/education/eduImgBlack.svg';
 
-import One from '../../assets/png/cdc/One.png'; // Changed to Cdc assets
-import Two from '../../assets/png/cdc/Two.png'; // Changed to Cdc assets
-import Three from '../../assets/png/cdc/Three.png'; // Changed to Cdc assets
-import Four from '../../assets/png/cdc/Four.png'; // Changed to Cdc assets
-
 import ucsdIcon from '../../assets/svg/education/ucsdIcon.svg';
 import { cdcTimeline } from '../../data/cdcTimeline'; // Changed to Cdc timeline import
 import './Timeline';
