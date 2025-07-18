@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/alantram.com/static/css/main.f66d59d4.chunk.css",
-    "main.js": "/alantram.com/static/js/main.0ab3ab30.chunk.js",
-    "main.js.map": "/alantram.com/static/js/main.0ab3ab30.chunk.js.map",
+    "main.js": "/alantram.com/static/js/main.b86dc1eb.chunk.js",
+    "main.js.map": "/alantram.com/static/js/main.b86dc1eb.chunk.js.map",
     "runtime-main.js": "/alantram.com/static/js/runtime-main.0186ab98.js",
     "runtime-main.js.map": "/alantram.com/static/js/runtime-main.0186ab98.js.map",
     "static/css/2.98c9c260.chunk.css": "/alantram.com/static/css/2.98c9c260.chunk.css",
@@ -42,6 +42,7 @@
     "static/media/Design-Constraints.80fb7286.svg": "/alantram.com/static/media/Design-Constraints.80fb7286.svg",
     "static/media/DigitalWorkflows.d33082a5.png": "/alantram.com/static/media/DigitalWorkflows.d33082a5.png",
     "static/media/ECPro-Draft-2024.0324885d.png": "/alantram.com/static/media/ECPro-Draft-2024.0324885d.png",
+    "static/media/ECPro-V5-Timeline.2ec1276e.png": "/alantram.com/static/media/ECPro-V5-Timeline.2ec1276e.png",
     "static/media/ECProV5-GoLive.30355020.png": "/alantram.com/static/media/ECProV5-GoLive.30355020.png",
     "static/media/ECProV5-Mobile-Showcase.0429b342.png": "/alantram.com/static/media/ECProV5-Mobile-Showcase.0429b342.png",
     "static/media/Embedded-Survey.af382785.png": "/alantram.com/static/media/Embedded-Survey.af382785.png",
@@ -231,6 +232,6 @@
     "static/css/2.98c9c260.chunk.css",
     "static/js/2.b7579420.chunk.js",
     "static/css/main.f66d59d4.chunk.css",
-    "static/js/main.0ab3ab30.chunk.js"
+    "static/js/main.b86dc1eb.chunk.js"
   ]
 }
