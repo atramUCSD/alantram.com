@@ -1,70 +1,106 @@
-
-/** Image Slider CSS*/
-
-/* Replace #fc4958 with color: #029D71; */
-
 .slider {
+  position: relative;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Nunito", sans-serif;
+  height: 60vh; /* Adjust as needed */
 }
 
-.header{
-  padding-top: 10vw;
-  padding-bottom: 3vw;
-  font-size: 1vw;
-  text-align: center;
-  font-family: var(--secondaryFont);
-  color: rgb(255, 255, 255);
-  font-style: normal;
-
+.left-arrow{
+    position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: #029d71;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  transition: color 0.3s ease;
 }
 
-.caption{
-  position:relative;
-  top:-20vh;
-  padding-top: 5vh;
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 3rem;
+  color: #029d71;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  transition: color 0.3s ease;
 }
 
-@media screen and (max-width: 1024px){
-  .caption{
-    display: none;
-  };
 
-  .slider{
-    display: none;
-  }
-
-  .slide.active
-  {
-    display: none;
-  }
-  .slide{
-    display: none;
-  }
+.left-arrow:hover,
+.right-arrow:hover {
+  color: #02643d;
 }
 
-@media screen and (max-width: 425px){
-  .header{
-    font-size: 1.5rem;
-  }
+.left-arrow {
+  left: 1rem;
 }
 
-#slide-element{
+.right-arrow {
+  right: 1rem;
+}
+
+#cdc-slide-element {
   width: 45vw;
-  border-radius: 3rem;
+  border-radius: 1rem;
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+  pointer-events: auto;
+  border-color: white;
+  border-style: solid;
 }
 
 .slide {
   opacity: 0;
-  transition-duration: 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .slide.active {
   opacity: 1;
-  transition-duration: 1s;
   transform: scale(1.08);
+  position: relative;
 }
+
+@media screen and (max-width: 1024px) {
+  .left-arrow,
+  .right-arrow {
+    display: none;
+  }
+
+  #slide-element {
+    width: 80vw;
+    border-radius: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #slide-element {
+    width: 90vw;
+  }
+}
+
+.slide-content {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.slide-description {
+  margin-top: 0.75rem;
+  padding: 0 1rem;
+  color: white;
+}
+

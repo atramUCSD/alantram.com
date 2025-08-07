@@ -173,7 +173,7 @@ footer {
   flex-direction: row; /* Aligns items horizontally */
   justify-content: flex-start; /* Aligns items to the left side of the container */
   align-items: flex-start; /* Aligns items to the top */
-  padding-top: 8rem;
+  padding-top: 1rem;
   width: 100%;
   height: auto; /* Adjust height as needed */
   padding-left: 20px; /* Add left padding to the whole container */
@@ -515,6 +515,13 @@ footer {
 .journey-step p {
   font-size: 1rem;
   color: #6e6e6e; /* Default tertiary80 color */
+  line-height: 1.5;
+  font-family: Poppins,sans-serif;
+}
+
+.journey-step li {
+  font-size: 1rem;
+  color: #C5D2C4; /* Default tertiary80 color */
   line-height: 1.5;
   font-family: Poppins,sans-serif;
 }

@@ -1,35 +1,30 @@
-
-import SonyIntern from '../../assets/png/experience/SonyIntern.png';
-import UserPersona from '../../assets/svg/sony/userPersona.svg';
-import Mentors from '../../assets/png/sony/mentors.png';
-import GamePad from '../../assets/png/sony/gamepadMockups.png';
-import Accessibility from '../../assets/png/sony/accessibilityMockup.png';
-import Remote from '../../assets/png/sony/tvremoteApp.png';
+import Ttec from '../../assets/png/cdc/ttec-cdc-design-system.png'
+import BorderVisuals from '../../assets/png/cdc/BorderVisuals.png';
+import Typography from '../../assets/png/cdc/Typography.png';
+import Color from '../../assets/png/cdc/Color-Palette.png';
+import Mobile from '../../assets/png/cdc/ECProV5-Mobile-Showcase.png';
+import { Description } from '@material-ui/icons';
 
 
 export const SliderData = [
   {
-    image: SonyIntern,
-    description: "Figure 1: Me with my teammates after doing an in person test with the Sony Bravia TV" 
+    image: Ttec,
+    description: 'Zoomed out snapshot of the Design System.',
   },
   {
-    image: Mentors,
-    description: "Figure 2: The Sony Mentors that volunteered to supervise the program"
+    image: Mobile,
+    description: 'Ensuring responsiveness and quality across multiple platforms is a core responsibility of a UI/UX Designer and Web Developer.',
   },
   {
-    image: UserPersona,
-    description: "Figure 3: A user persona we created to support the usefulness of a gamepad remote"
+    image: Color,
+    description: 'UI/UX work isn’t just plugging in web assets until something looks right. Branding must be thoroughly researched in order to instill trust within stakeholders.',
   },
   {
-    image: GamePad,
-    description: "Figure 4: Several mockups of the gamepad remote"
+    image: Typography,
+    description: 'Typography builds up recognition and familiarity across web platforms. It supports priority hierarchy, differentiates between links and common text, and contributes to visual structure.',
   },
   {
-    image: Accessibility,
-    description: "Figure 5: A low level mockup of how a remote app could be accessed easily on Apple Devices"
+    image: BorderVisuals,
+    description: 'Blocky pages can give off a prototype or draft feel to users. Understanding the right balance of border curvature, along with using shadows, blurs, and gradients, helps build a polished and professional web application.',
   },
-  {
-    image: Remote,
-    description: "Figure 6: Several mockups of how a TV remote app would store and display content"
-  }
 ];

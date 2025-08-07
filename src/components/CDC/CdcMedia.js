@@ -13,17 +13,17 @@ function CdcMedia() {
 
     return (
         <div className="about" id="about" style={{ backgroundColor: theme.secondary }}>
-            
             <div className="about-body" style={{ textAlign: "center" }}>
-    <div className="about-description">
-        <h2 style={{ color: theme.primary }}> Introduction</h2>
-        <p style={{ color: theme.tertiary80 }}> 
+                <div className="about-description">
+                    <h2 style={{ color: theme.primary }}> Introduction</h2>
+                    <p style={{ color: theme.tertiary80 }}> 
             As a Senior Web Designer and UI/UX Specialist at General Dynamics Information Technology (GDIT), 
             I played a key role in enhancing the user experience and interface design for government IT solutions. 
             My work focused on developing intuitive, accessible, and scalable UI/UX designs tailored for the FAA UAS 
             project and ServiceNow CRM/ITSM platforms. <br/><br/>
-        </p>
-    </div>
+                    </p>
+                </div>
+                
                 <div className="about-img">
                     <ImageSlider slides={SliderData} /> {/* Passing slider data to the image slider */}
                     <Captions slides={SliderData} /> {/* Passing slider data to the captions component */}

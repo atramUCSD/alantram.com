@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import GanttChart from '../../assets/png/cdc/GanttChart.png'; // Placeholder for Gantt Chart image
+import GanttChart from '../../assets/png/sony/Timeline.png';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 
@@ -34,7 +34,6 @@ function Timeline() {
                     <img src={GanttChart} alt="Gantt Chart" />
                     {/* Uncomment the iframe to include Google Sheets chart
                     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTqC0no0Zq1vkazFNwhzn5cFxx0RvceyjPzCRtxl3-Gdo6mRqh1Ymbi2Owa0Z2WOETODLZJPMv2UEnF/pubhtml?widget=true&amp;headers=false"></iframe>
-                    */}
                     {/* <img src={theme.eduimg} alt="Education image" /> */}
                     {/* <img src={libraryWalk} alt="Library walk" /> */}
                 </div>

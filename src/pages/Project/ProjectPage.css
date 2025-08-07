@@ -30,6 +30,7 @@
 }
 
 .projectPage-search {
+    padding-bottom: 30px;
     width: 100%;
     display: flex;
     align-items: center;

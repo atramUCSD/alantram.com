@@ -79,34 +79,38 @@
 }
 
 .timeline-iframe {
-    box-sizing: border-box;
-    padding: 1rem;
-    flex: .75;
-    margin-top: 1rem;
-    
-    iframe{
-        display: block;
-        height: 50rem;
-        margin:auto;
-        width: 90%;
-        
-        @media only screen and (min-width: 768px) and (max-width: 1023px){
-            display:none;
-        }
-        
-        @media only screen and (min-width: 480px) and (max-width: 767px){
-            display:none;
-        }
-        
-        @media only screen and (min-width: 0px) and (max-width: 479px){
-            display:none;
-        }
-      }
+  box-sizing: border-box;
+  padding: 1rem;
+  flex: 0.75;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+
+  iframe {
+    display: none;
+
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      display: none;
     }
 
-.education-image > img {
-    width: 100%;
-    border-radius: 3rem;
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      display: none;
+    }
+
+    @media only screen and (min-width: 0px) and (max-width: 479px) {
+      display: none;
+    }
+  }
 }
 
 
