@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/alantram.com/static/css/main.89883690.chunk.css",
-    "main.js": "/alantram.com/static/js/main.55e2bed1.chunk.js",
-    "main.js.map": "/alantram.com/static/js/main.55e2bed1.chunk.js.map",
+    "main.js": "/alantram.com/static/js/main.4c200397.chunk.js",
+    "main.js.map": "/alantram.com/static/js/main.4c200397.chunk.js.map",
     "runtime-main.js": "/alantram.com/static/js/runtime-main.c3e46187.js",
     "runtime-main.js.map": "/alantram.com/static/js/runtime-main.c3e46187.js.map",
     "static/css/2.98c9c260.chunk.css": "/alantram.com/static/css/2.98c9c260.chunk.css",
@@ -213,6 +213,7 @@
     "static/media/tailwind.01daca9b.svg": "/alantram.com/static/media/tailwind.01daca9b.svg",
     "static/media/tensorflow.04d29a7b.svg": "/alantram.com/static/media/tensorflow.04d29a7b.svg",
     "static/media/ttec-cdc-design-system.9fba0ec5.png": "/alantram.com/static/media/ttec-cdc-design-system.9fba0ec5.png",
+    "static/media/turbotax.1194d177.jpg": "/alantram.com/static/media/turbotax.1194d177.jpg",
     "static/media/tvremoteApp.6cdb4b3f.png": "/alantram.com/static/media/tvremoteApp.6cdb4b3f.png",
     "static/media/typescript.f66836b8.svg": "/alantram.com/static/media/typescript.f66836b8.svg",
     "static/media/ucsdIcon.c563782c.svg": "/alantram.com/static/media/ucsdIcon.c563782c.svg",
@@ -232,6 +233,6 @@
     "static/css/2.98c9c260.chunk.css",
     "static/js/2.e412eb35.chunk.js",
     "static/css/main.89883690.chunk.css",
-    "static/js/main.55e2bed1.chunk.js"
+    "static/js/main.4c200397.chunk.js"
   ]
 }
