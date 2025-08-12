@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ITSM Boilerplate (Local)</title>
+
+    <!-- Local fonts & layout -->
+    <style>
+      @font-face {
+        font-family: 'ServiceNowSansRegular';
+        src: url('./assets/fonts/ServiceNowSans-Regular.woff2') format('woff2');
+        font-weight: 400; font-style: normal; font-display: swap;
+      }
+      @font-face {
+        font-family: 'ServiceNowSansBook';
+        src: url('./assets/fonts/ServiceNowSans-Book.woff2') format('woff2');
+        font-weight: 500; font-style: normal; font-display: swap;
+      }
+      @font-face {
+        font-family: 'ServiceNowSansBold';
+        src: url('./assets/fonts/ServiceNowSans-Bold.woff2') format('woff2');
+        font-weight: 700; font-style: normal; font-display: swap;
+      }
+
+      :root {
+        --sn-deep: #083142;
+        --sn-deeper: #062a38;
+        --sn-accent: #22c55e; /* accent green */
+        --sn-ink: #0e2f3a;
+        --sn-text: #102a36;
+      }
+
+      html, body { margin: 0; padding: 0; }
+      body {
+        font-family: ServiceNowSansRegular, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
+        color: #0b2530;
+        background: #fff;
+      }
+      .shell { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+      .sn-header { border-bottom: 1px solid #eaeaea; background: #ffffffcc; backdrop-filter: blur(6px); position: sticky; top: 0; z-index: 10; }
+      .sn-header .nav-shell { display:flex; align-items:center; justify-content: space-between; padding: 12px 0; }
+      .sn-logo { height: 28px; }
+      .sn-header nav a { color: #083142; text-decoration: none; margin: 0 12px; font-weight: 600; }
+      .sn-header nav a:hover { text-decoration: underline; }
+
+      .hero { padding: 72px 0 56px; }
+      .hero--dark {
+        background: linear-gradient(180deg, var(--sn-deep) 0%, var(--sn-deeper) 100%);
+        color: #fff;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: center;
+      }
+      .hero h1 { font-family: ServiceNowSansBold, sans-serif; font-size: 3rem; margin: 0 0 12px; }
+      .hero p { font-family: ServiceNowSansBook, sans-serif; font-size: 1.125rem; color: #cfe2e6; max-width: 60ch; }
+      .cta-row { display:flex; gap: 12px; margin-top: 18px; }
+      .cta { display:inline-block; padding: 12px 18px; text-decoration:none; border-radius: 10px; font-weight: 700; }
+      .cta--primary { background: var(--sn-accent); color: #072a3a; }
+      .cta--secondary { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
+      .cta--secondary:hover { border-color: #fff; }
+
+      .logo-row { display:flex; gap: 16px; align-items:center; margin-top: 20px; color:#b7c9ce; font-size: 0.95rem; flex-wrap: wrap;}
+      .logo-row ul { display:flex; gap: 12px; list-style:none; padding:0; margin:0; opacity: 0.85; flex-wrap: wrap; }
+      .logo-row li { background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 8px; color: #dce9ec; }
+
+      .hero-right { display:flex; align-items:center; justify-content:center; }
+      .video-card { background:#fff; border-radius: 16px; box-shadow: 0 22px 40px rgba(0,0,0,0.24); padding: 12px; width: 100%; max-width: 520px; }
+      .video-thumb { background: linear-gradient(135deg, #e6eef1, #cfdde2); border-radius: 12px; aspect-ratio: 16/10; display:grid; place-items:center; position:relative; }
+      .video-thumb .play { width: 60px; height: 60px; border-radius:50%; background:#fff; display:grid; place-items:center; font-size: 22px; color:#0d2f3a; box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+      .video-caption { color:#33545d; font-size: 0.95rem; margin-top: 8px; padding-left: 4px; }
+
+      /* Body section sample */
+      main.shell { padding: 56px 24px; }
+      main.shell h2 { color: var(--sn-ink); font-family: ServiceNowSansBold, sans-serif; }
+      main.shell p { color: #294046; }
+      
+      @media (max-width: 900px) {
+        .hero-grid { grid-template-columns: 1fr; }
+      }
+    
+      /* --- Use cases (tabbed) --- */
+      .usecases { background:#f6f8f9; padding: 56px 0; }
+      .usecases h2 { text-align:center; font-family: ServiceNowSansBold, sans-serif; color: var(--sn-ink); margin: 0 0 20px; font-size: 2.1rem; }
+      .use-tabwrap { display:flex; justify-content:center; }
+      .use-tabs {
+        display:flex; gap: 8px; background:#e8edf0; padding: 8px; border-radius: 999px; flex-wrap: wrap;
+      }
+      .use-tab {
+        border: 0; border-radius: 999px; padding: 10px 16px; font-weight:700; cursor:pointer;
+        background: transparent; color: #083142; transition: background .2s,color .2s, transform .1s;
+      }
+      .use-tab[aria-selected="true"] { background:#0d2f3a; color:#fff; }
+      .use-tab:focus-visible { outline: 3px solid #22c55e; outline-offset: 2px; }
+      .use-body { display:grid; grid-template-columns: 1.05fr .95fr; gap: 32px; align-items: start; margin-top: 28px; }
+      .use-left h3 { font-family: ServiceNowSansBold, sans-serif; color: var(--sn-ink); font-size: 1.9rem; margin: 0 0 8px; }
+      .use-left p { color:#33545d; font-size: 1.05rem; line-height:1.6; max-width: 62ch; }
+      .use-cta { display:inline-block; margin:16px 0; padding: 10px 16px; border-radius: 999px; text-decoration:none; border:2px solid #23c75f; color:#083142; font-weight:700; }
+      .use-links { margin-top: 14px; }
+      .use-links a { display:inline-block; color:#0d2f3a; text-decoration:none; margin-right:18px; font-weight:700; }
+      .use-links a::after { content:" →"; }
+      .use-right .imgcard { border-radius: 16px; padding: 10px; background:#fff; box-shadow: 0 18px 36px rgba(0,0,0,0.12); }
+      .use-right .imgcard img { width: 100%; display:block; border-radius: 12px; }
+
+      .use-panel[hidden] { display:none; }
+
+      /* --- Customers slider --- */
+      .customers { padding: 56px 0; background:#fff; }
+      .customers .toprow { display:flex; align-items:center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+      .customers h2 { font-family: ServiceNowSansBold, sans-serif; color: var(--sn-ink); font-size: 2rem; margin:0; }
+      .pill { padding: 10px 16px; border-radius:999px; border:2px solid #23c75f; background:#eafff0; color:#083142; text-decoration:none; font-weight:700; }
+      .carousel { position: relative; }
+      .track { display:grid; grid-auto-flow: column; grid-auto-columns: 80%; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+      .card { position: relative; border-radius: 16px; overflow: hidden; min-height: 220px; background:#d7e1e5; scroll-snap-align: start; }
+      .card .overlay { position:absolute; left:0; top:0; right:0; bottom:0; display:flex; align-items:flex-end; }
+      .card .badge { margin: 16px; background: rgba(8,49,66,.85); color:#fff; padding: 14px 16px; border-radius: 12px; max-width: 60%; }
+      .card .badge b { font-size: 1.6rem; display:block; }
+      .car-ctrl { display:flex; justify-content: space-between; align-items:center; margin-top: 12px; }
+      .car-btn { border:0; width:44px; height:44px; border-radius:999px; background:#0d2f3a; color:#fff; font-weight:700; cursor:pointer; }
+      .brandrow { display:flex; justify-content:center; gap: 28px; margin-top: 18px; opacity:.8; }
+      .brandlogo { padding: 6px 10px; border-radius:8px; background:#f6f8f9; color:#0d2f3a; font-weight:700; }
+      
+      @media (max-width: 900px) {
+        .use-body { grid-template-columns: 1fr; }
+        .track { grid-auto-columns: 92%; }
+      }
+
+    
+      /* --- FAQ / accordion --- */
+      .faq { background:#f6f8f9; padding:56px 0; }
+      .faq .shell { max-width: 1000px; }
+      .faq-top { display:flex; justify-content:flex-end; margin-bottom: 12px; }
+      .faq-collapse { background:none; border:0; color:#0d2f3a; font-weight:700; text-decoration:underline; cursor:pointer; }
+      .faq-list { display:grid; gap: 16px; }
+      .faq-item { background:#fff; border-radius: 12px; box-shadow: 0 8px 18px rgba(0,0,0,.06); border:2px solid #23c75f33; }
+      .faq-q { display:flex; align-items:center; justify-content:space-between; padding: 18px 20px; cursor:pointer; }
+      .faq-q h3 { margin:0; font-family: ServiceNowSansBold, sans-serif; color:#0b2f3a; font-size: 1.4rem; }
+      .faq-q .chev { width: 24px; height: 24px; border-radius: 6px; border:2px solid #0d2f3a; display:grid; place-items:center; font-weight:700; margin-left: 12px; }
+      .faq-a { padding: 0 20px 18px; color:#2d4a52; line-height:1.7; }
+      .faq-a a { color:#0d2f3a; font-weight:700; }
+      .faq-item[open] .faq-q { border-bottom: 1px solid #e9eef1; }
+      .faq-item[open] .chev { background:#0d2f3a; color:#fff; }
+
+    </style>
+
+    <!-- Core CSS from the page (local copies) so original classes still apply where used -->
+    <link rel="stylesheet" href="./assets/css/clientlib-arc-commons.min.bb9017e42ff5b6a931108fb5759f3461.css" />
+    <link rel="stylesheet" href="./assets/css/headerV3.bundle.40260da52ffbaa251e35.css" />
+    <link rel="stylesheet" href="./assets/css/site.min.30313e00669f877069f15dd099f23454.css" />
+  </head>
+  <body>
+    <!-- Sticky header using the local logo -->
+    <header class="sn-header">
+      <div class="shell nav-shell">
+        <img src="./assets/img/servicenow-header-logo.svg" alt="ServiceNow" class="sn-logo" />
+        <nav aria-label="Primary">
+          <a href="#">User Personas</a>
+          <a href="#">UX Insights</a>
+          <a href="#">Design & Handoffs</a>
+          <a href="#">Dashboards & Data</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero hero--dark">
+      <div class="shell hero-grid">
+        <div class="hero-left">
+          <h1>IT Service Management (ITSM)</h1>
+          <p>Boilerplate page assembled from HAR-extracted assets. This static shell uses local fonts, CSS, and JS so you can port the look &amp; feel into your React portfolio.</p>
+          <div class="cta-row">
+            <a class="cta cta--primary" href="#">See demo</a>
+            <a class="cta cta--secondary" href="#">Get pricing</a>
+          </div>
+          <div class="logo-row" aria-label="Trusted by">
+            <span>Trusted by</span>
+            <ul>
+              <li>NVIDIA</li>
+              <li>Visa</li>
+              <li>Walmart</li>
+              <li>Amgen</li>
+              <li>Merck</li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="video-card">
+            <div class="video-thumb">
+              <div class="play">▶</div>
+            </div>
+            <div class="video-caption">See ITSM in action</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example content area -->
+    
+    <!-- Use cases -->
+    <section class="usecases" id="usecases">
+      <div class="shell">
+        <h2>Use cases for ITSM</h2>
+        <div class="use-tabwrap">
+          <div class="use-tabs" role="tablist" aria-label="Use cases tabs">
+            <button class="use-tab" role="tab" aria-selected="true" aria-controls="uc-incident" id="tab-incident">Incident resolution</button>
+            <button class="use-tab" role="tab" aria-selected="false" aria-controls="uc-agent" id="tab-agent">Agent productivity</button>
+            <button class="use-tab" role="tab" aria-selected="false" aria-controls="uc-self" id="tab-self">Self-service</button>
+            <button class="use-tab" role="tab" aria-selected="false" aria-controls="uc-predict" id="tab-predict">Service predictability</button>
+            <button class="use-tab" role="tab" aria-selected="false" aria-controls="uc-change" id="tab-change">Change management</button>
+            <button class="use-tab" role="tab" aria-selected="false" aria-controls="uc-issue" id="tab-issue">Issue identification</button>
+          </div>
+        </div>
+
+        <div class="use-body">
+          <div class="use-left">
+            <div class="use-panel" id="uc-incident" role="tabpanel" aria-labelledby="tab-incident">
+              <h3>Faster incident resolution</h3>
+              <p>Use AI‑assisted workflows on a single platform to help restore services faster, eliminate recurring incidents, and minimize disruptions.</p>
+              <a class="use-cta" href="#">Explore AI Agents</a>
+              <div class="use-links">
+                <a href="#">View Incident Management Docs</a>
+              </div>
+              <h4 style="margin:22px 0 8px; color:#0d2f3a;">Related products</h4>
+              <div class="use-links">
+                <a href="#">Incident Management</a>
+                <a href="#">Performance Analytics</a>
+                <a href="#">Service Operations Workspace</a>
+              </div>
+            </div>
+
+            <div class="use-panel" id="uc-agent" role="tabpanel" aria-labelledby="tab-agent" hidden>
+              <h3>Boost agent productivity</h3>
+              <p>Empower agents with guided decisions, knowledge, and automation so they can resolve more, faster.</p>
+              <a class="use-cta" href="#">See agent tools</a>
+            </div>
+
+            <div class="use-panel" id="uc-self" role="tabpanel" aria-labelledby="tab-self" hidden>
+              <h3>Modern self‑service</h3>
+              <p>Deliver intuitive portals and virtual agents that help users help themselves across channels.</p>
+              <a class="use-cta" href="#">Explore self‑service</a>
+            </div>
+
+            <div class="use-panel" id="uc-predict" role="tabpanel" aria-labelledby="tab-predict" hidden>
+              <h3>Service predictability</h3>
+              <p>Use analytics and AI to anticipate demand, reduce risk, and plan for change.</p>
+              <a class="use-cta" href="#">See insights</a>
+            </div>
+
+            <div class="use-panel" id="uc-change" role="tabpanel" aria-labelledby="tab-change" hidden>
+              <h3>Change management</h3>
+              <p>Coordinate changes with visibility and control to reduce incidents and accelerate releases.</p>
+              <a class="use-cta" href="#">Review change flows</a>
+            </div>
+
+            <div class="use-panel" id="uc-issue" role="tabpanel" aria-labelledby="tab-issue" hidden>
+              <h3>Issue identification</h3>
+              <p>Spot problems early with proactive monitoring and built‑in workflows to address them.</p>
+              <a class="use-cta" href="#">Discover monitoring</a>
+            </div>
+          </div>
+
+          <div class="use-right">
+            <div class="imgcard">
+              <img src="./assets/img/placeholder-16x9.svg" alt="Use case illustration" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customers stories -->
+    <section class="customers" id="customers">
+      <div class="shell">
+        <div class="toprow">
+          <h2>Industry leaders rely on ServiceNow to make work better</h2>
+          <a class="pill" href="#">See All Stories</a>
+        </div>
+
+        <div class="carousel">
+          <div class="track" id="storyTrack">
+            <article class="card" aria-label="USI reduces MTTR">
+              <img src="./assets/img/placeholder-16x9.svg" alt="" style="width:100%; height:100%; object-fit:cover;" />
+              <div class="overlay">
+                <div class="badge">
+                  <b>&gt;47%</b>
+                  <div>decrease in mean time to resolution with AI</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" aria-label="MEARS improvement">
+              <img src="./assets/img/placeholder-16x9.svg" alt="" style="width:100%; height:100%; object-fit:cover;" />
+              <div class="overlay">
+                <div class="badge">
+                  <b>+87%</b>
+                  <div>increase in first‑contact resolution rate</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" aria-label="Griffith University">
+              <img src="./assets/img/placeholder-16x9.svg" alt="" style="width:100%; height:100%; object-fit:cover;" />
+              <div class="overlay">
+                <div class="badge">
+                  <b>92%</b>
+                  <div>CSAT across IT support</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="car-ctrl">
+            <button class="car-btn" data-dir="-1" aria-label="Previous">←</button>
+            <button class="car-btn" data-dir="1" aria-label="Next">→</button>
+          </div>
+          <div class="brandrow" aria-label="Customer logos">
+            <span class="brandlogo">Card Sort</span>
+            <span class="brandlogo">Pitfall Solutioning and Behavior Tracking</span>
+            <span class="brandlogo">Griffith University</span>
+          </div>
+        </div>
+      </div>
+    </section>
+<main class="shell" id="main-content" role="main">
+      <h2>Section title</h2>
+      <p>Replace this with your own content. If you need the full original markup, use your uploaded <code>index.html</code> as reference and copy only the sections you want.</p>
+    </main>
+
+    <!-- Core JS from the page (kept defer) -->
+    <script defer src="./assets/js/site.min.af096d2ee96db104c83e042c4f605e19.js"></script>
+  
+    <script>
+      // Tabs logic
+      const tabs = document.querySelectorAll('.use-tab');
+      const panels = document.querySelectorAll('.use-panel');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const target = tab.getAttribute('aria-controls');
+          tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+          tab.setAttribute('aria-selected', 'true');
+          panels.forEach(p => {
+            p.hidden = p.id !== target;
+          });
+        });
+      });
+
+      // Carousel controls
+      const track = document.getElementById('storyTrack');
+      document.querySelectorAll('.car-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const dir = parseInt(btn.dataset.dir, 10);
+          const w = track.clientWidth * 0.9;
+          track.scrollBy({ left: w * dir, behavior: 'smooth' });
+        });
+      });
+    </script>
+
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="shell">
+        <div class="faq-top">
+          <button class="faq-collapse" id="faqCollapseAll">Collapse All</button>
+        </div>
+        <div class="faq-list" role="list">
+          <details class="faq-item" open>
+            <summary class="faq-q">
+              <h3>Who is ServiceNow for?</h3>
+              <span class="chev">–</span>
+            </summary>
+            <div class="faq-a">
+              <p>Everyone who is digitally transforming their business can use ServiceNow to move faster with AI and automation. The platform and its native workflows serve all business functions—IT, HR, customer service, finance, and procurement—across industries and company sizes. It integrates with legacy systems and newer solutions, becoming the digital backbone of your enterprise. <!-- <a href="#">Read customer stories</a> -->.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" open>
+            <summary class="faq-q">
+              <h3>What is the ServiceNow AI Platform?</h3>
+              <span class="chev">–</span>
+            </summary>
+            <div class="faq-a">
+              <p>The ServiceNow AI Platform is the cloud-based foundation for all ServiceNow products. It connects and automates business workflows across the enterprise using one architecture, one data model, and a collection of AI capabilities, business applications, and low‑code/no‑code tools. <!-- <a href="#">Learn more</a>. --></p>
+            </div>
+          </details>
+
+          <details class="faq-item" open>
+            <summary class="faq-q">
+              <h3>What is an AI agent?</h3>
+              <span class="chev">–</span>
+            </summary>
+            <div class="faq-a">
+              <p>An AI agent is an autonomous system designed to gather data, make decisions, and execute tasks to achieve predefined goals. It adapts to new information, learns over time, and can manage a wide range of tasks—from simple repetitive actions to complex problem‑solving. ServiceNow AI Agents automate workflows, streamline operations, and adapt to diverse business needs across IT, HR, CRM, and more.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" open>
+            <summary class="faq-q">
+              <h3>What is ServiceNow IT Service Management?</h3>
+              <span class="chev">–</span>
+            </summary>
+            <div class="faq-a">
+              <p>ServiceNow IT Service Management (ITSM) delivers resilient enterprise IT services, boosts IT productivity, and improves employee experiences—all on the ServiceNow AI Platform. <!-- <a href="#">See how ITSM works</a>. --></p>
+            </div>
+          </details>
+
+          <details class="faq-item" open>
+            <summary class="faq-q">
+              <h3>What is Service Operations?</h3>
+              <span class="chev">–</span>
+            </summary>
+            <div class="faq-a">
+              <p>Service Operations combines IT Service Management (ITSM) and IT Operations Management (ITOM) to help IT teams work together to deliver resilient services, boost productivity, and modernize experiences.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+
+    <script>
+      // Toggle +/- in the summary
+      document.querySelectorAll('.faq-item').forEach(d => {
+        d.addEventListener('toggle', () => {
+          const icon = d.querySelector('.chev');
+          if (icon) icon.textContent = d.open ? '–' : '+';
+        });
+      });
+      // Collapse All
+      const collapseBtn = document.getElementById('faqCollapseAll');
+      if (collapseBtn) {
+        collapseBtn.addEventListener('click', () => {
+          document.querySelectorAll('.faq-item[open]').forEach(d => d.open = false);
+        });
+      }
+    </script>
+
+</body>
+</html>
