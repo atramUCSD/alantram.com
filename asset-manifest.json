@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/alantram.com/static/css/main.e22e9d1b.css",
-    "main.js": "/alantram.com/static/js/main.91e2158a.js",
+    "main.js": "/alantram.com/static/js/main.c2bedc32.js",
     "static/js/453.c7b07739.chunk.js": "/alantram.com/static/js/453.c7b07739.chunk.js",
     "static/media/self-gradient-gif.gif": "/alantram.com/static/media/self-gradient-gif.7be58239dddfde0b0ff5.gif",
     "static/media/Restaurant-Thumbnail.svg": "/alantram.com/static/media/Restaurant-Thumbnail.033d7ced9785ea7ec97f8a3da55d687a.svg",
@@ -220,11 +220,11 @@
     "static/media/vuetifyjs.svg": "/alantram.com/static/media/vuetifyjs.3848fcff351a0cbc94e75362594d2b25.svg",
     "static/media/bulma.svg": "/alantram.com/static/media/bulma.12ecb7941234000a2fe38a48cbce30da.svg",
     "main.e22e9d1b.css.map": "/alantram.com/static/css/main.e22e9d1b.css.map",
-    "main.91e2158a.js.map": "/alantram.com/static/js/main.91e2158a.js.map",
+    "main.c2bedc32.js.map": "/alantram.com/static/js/main.c2bedc32.js.map",
     "453.c7b07739.chunk.js.map": "/alantram.com/static/js/453.c7b07739.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e22e9d1b.css",
-    "static/js/main.91e2158a.js"
+    "static/js/main.c2bedc32.js"
   ]
 }
